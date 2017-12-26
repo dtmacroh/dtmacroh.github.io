@@ -32,6 +32,11 @@ h5 {
 p {
 	font-family: 'Open Sans', sans-serif;
 }
+article{
+	margin: 150px;
+	display:block;
+	
+}
 a {
 	color: #0dad8d;
 }
@@ -262,6 +267,7 @@ ol.typesocial li {
 	overflow: hidden;
 	position: relative;
 }
+
 .hover-bg .hover-text {
 	position: absolute;
 	text-align: center;
@@ -503,6 +509,31 @@ label {
 	padding: 22% 10%;
 }
 }
+.or-spacer-vertical {
+  display:inline-block;
+  margin-top:100px; margin-left:100px; width:100px; 
+  position:relative; 
+  
+  
+  .mask { 
+    overflow:hidden; width:20px; height:200px; 
+    //outline:1px solid pink;
+  }
+  &.left .mask:after { 
+    content:''; 
+    display:block; margin-left:-20px;
+    width:20px; height:100%;  
+    border-radius:12px / 125px;  
+    box-shadow:0 0 8px black;
+  }
+  &.right .mask:before { 
+    content:''; 
+    display:block; margin-left:20px;
+    width:20px; height:100%; 
+    border-radius:12px / 125px; 
+    box-shadow:0 0 8px black;
+  }
+}
 /* Tooltip container */
 .tooltip {
     position: relative;
@@ -529,3 +560,4 @@ label {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
