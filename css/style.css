@@ -129,13 +129,14 @@ hr {
 }
 /* Home Style */
 header {
-	background: url(../img/header-bg.jpg), no-repeat bottom right;
+	/*background: url(../img/header-bg.jpg), no-repeat bottom right;*/
+	background: linear-gradient(to bottom,rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.15) 40%,rgba(0,0,0,0) 100%),url(../img/header-bg.jpg), no-repeat bottom right;
 	background-size: cover;
 	color: #cfcfcf;
 	position: relative;
 	height: 100%;
-	
-	&:before {
+		width:100%;
+	/* &:before {
     content: '';
 	position: absolute;
 	top: 0;
@@ -144,7 +145,7 @@ header {
 	left: 0;
 	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
 	opacity: .6; 
-	}
+	} */
 }
 header p {
 	color: rgba(255,255,255,0.8);
