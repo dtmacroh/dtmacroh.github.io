@@ -24,6 +24,7 @@
 <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -50,7 +51,13 @@
         <li><a href="index.html" class="page-scroll">Home</a></li>
         <li><a href="#works-section" class="page-scroll">Portfolio</a></li>
         <li><a href="#about-section" class="page-scroll">About</a></li>
-   
+		 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li><a href="#">Dropdown Link 1</a></li>
+			<li><a href="#">Dropdown Link 2</a></li>
+			<li><a href="#">Dropdown Link 3</a></li>
+		</ul>
+		</li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -58,7 +65,7 @@
   <!-- /.container-fluid --> 
 </nav>
 
-<div  style="background-color:#1e2330" >
+<div  class="col-xs-12 col-sm-12 col-md-12" style="background-color:#1e2330;" >
 	
     <div class="section-title text-center center" style="padding-top:100px">
 	
@@ -68,10 +75,10 @@
 	
 
 <div class="center"  >
-<img src="img/project0/hakase_library_hi.png" alt="Picture" style="width:75%;min-width:400px" />
+<img src="img/project0/hakase_library_hi.png" alt="Picture" style="width:75%;min-width:300px" />
 </div>
 <br/>
-<div >Goal:To create a button that represents another student in class. Your client should recognize themselves in the thing you create, 
+<div>Goal:To create a button that represents another student in class. Your client should recognize themselves in the thing you create, 
 and be delighted.</div>
 				
 
@@ -79,23 +86,26 @@ and be delighted.</div>
 
 </div>
 
+<div style="padding-top:30px">&nbsp;</div>
 
-
-<div class="container">
+<div class="container"  >
 <!--article-->
-<div id="intro-section">
+<div id="intro-section" >
+
 	<div class="section-title center">
-	<h2><font color="#508d24">THE IRENE</font></h2>
+	
+	
+	<h2 ><font color="#508d24">THE IRENE</font></h2>
 	</div>
 
 	<div class="col-sm-12 col-md-2 left" >					
 	<h2 ><strong><font size="3">Description</font></strong></h2>
 	</div>
 	
-	<div class="col-sm-12 col-md-10" style="padding-bottom:30px">My client is Irene. She is described as clumsy, random, oblivious and funny. 
+	<div class="col-sm-12 col-md-10" style="padding-bottom:30px"><p>My client is Irene. She is described as clumsy, random, oblivious and funny. 
 	Her favorite character is Hakase from the anime Nichijou in the comedy genre, and in her spare time she likes reading and playing the alto saxophone. 
 	She tends to get clumsier when there are more objects on the ground, but in a new environment she is less oblivious.&nbsp;<br /><br />
-	In this project, I incorporated Irene's traits and hobbies into her favorite character Hakase.</div>
+	In this project, I incorporated Irene's traits and hobbies into her favorite character Hakase.</p></div>
 	
 </div>
 <div id="process-section">
@@ -103,7 +113,7 @@ and be delighted.</div>
 	<h2 >The Process</h2>
 	</div>
 
-	<div class="col-sm-12 col-md-6">In the first 5 minutes of talking to Irene, I gathered that she abolutely LOVES anime, and loves working with her hands (sewing and 
+	<div class="col-sm-12 col-md-6"><p>In the first 5 minutes of talking to Irene, I gathered that she abolutely LOVES anime, and loves working with her hands (sewing and 
 	making plushies) . Initially I thought our button had the ability delight <em>and&nbsp;</em>&#8203; help the user, and so I started thinking of ways in which 
 	a button can help her in her everyday life. These are my initial ideas:&nbsp;
 	<br/>
@@ -116,8 +126,9 @@ and be delighted.</div>
 	history reading, alto saxophone playing and learning songs by ear to written notes. Her favorite memory dates back to junior high, 
 	favorite place is a quiet spot in the library, and she is less oblivious in new environments but more likely to be clumsy if the environment is messy.
 
-	<br/>
+	<br/><br/>
 	With this information I start to sketch.
+	</p>
 	</div>
 
 	<div class="col-sm-12 col-md-6">
@@ -126,9 +137,9 @@ and be delighted.</div>
 	</a>
 	<h3>Initial Concept Ideas</h3>
 	</div>
-	<div>
+	<div><p>
 	Some of the storyboards and ideas I have sketched are as follows:
-	
+	</p>
 	</div>
 	
 	
@@ -204,28 +215,23 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
 	
 	
 	
-	
-	<br/>
-	<div>
-	After some sketches, I decided to step back and think about the implementation of the button. Some of my ideas were interesting, but ambitious to implement given the time constraint. i was seriously considering the idea of iterating through multiple anime characters and having the button do animations (jump), but my critique group advised me to do one or the other because there would not be enough time to implement everything. 
-	</div>
-	<br/>
-	<div>
+	<p>
+	<br/><br/>
+	After some sketches, I decided to step back and think about the implementation of the button. Some of my ideas were interesting, but ambitious to implement given the time constraint. i was seriously considering the idea of iterating through multiple anime characters and having the button do animations (jump), but my critique group advised me to do one or the other because there would not be enough time to implement everything. 	
+	<br/><br/>
 	With this in mind I zeroed in on these qualities/hobbies: oblivious, funny, clumsy, random, reading and alto saxophone playing. ​I chose these because I felt it was important to make these personalities obvious in the interaction with the button (saxophone playing, as you will see in a bit), and given the time constraint (1 week) would be the quickest to implement. 
-	</div>
-	<br/>
-	<div>
+	
+	<br/><br/>
 	I decided to pick Hakase as the main button to represent Irene's love for this character. In order to make Irene's personality shine through, Hakase will be Irene's representative in this project. One click will represent calling Hakase's attention, two clicks will ask Hakase to play a song for us via saxophone. In this case, she will play "Careless Whisper" by George Michael because I thought it will play to her funny personality. After an initial click, every 3 seconds she will do something different, either: face left, right, back, jump, or fall. I feel this plays to her random personality because you can't call these actions on demand, and you can't expect to know what action comes next.  
-	</div>
-	<br/>
-	<div>
+	<br/><br/>
+	
 	At this point i still have not hit 3 of the qualities i have zeroed in on, and I went to Kevin (our Teaching Advisor for this course, CPSC 581) for more feedback. He mentions to consider the context of the environment the button is in. With this the right click was born - it allows to toggle between environments (the library, Irene's favorite spot - also means she likes reading- and the jungle). In the library, Hakase has a 30% chance of facing you when called, and a 10% chance of tripping (being clumsy). In the jungle, Hakase has a significantly higher chance of falling, and in this new environment she is less oblivious so is more likely to face you.
-	</div>
-	<br/>
-	<div>
+	
+	<br/><br/>
+	
 	
 	With a final revision of this storyboard I proceeded to implement my button.
-	</div>
+	</p>
 	
 </div>
 
@@ -344,7 +350,7 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
 <div id="code-section" >	
 	<div class="section-title center">
 	<h2 >Code</h2>
-	
+	<p>
 	<span>Instructions for running source code:&nbsp;</span>
 	<ol style="list-style:decimal;margin-left:3%">
 	<li>Make sure Visual Studio (2015 or above) is installed on your machine.</li>
@@ -359,7 +365,7 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
 	<li>Make sure you have a machine that operates on Windows.</li>
 	<li>Download and unzip <a href="https://drive.google.com/file/d/0B1Ak7GTiyrNzWlVpSEhGYzNLTjg/view?usp=sharing" target="_blank">this</a>.</li>
 	<li>Navigate to Debug &gt; Hakase (the application)</li><li>Double click the application to run.</li></ol></div>
-
+	</p>
 </div>
 
 <div id="source-section" >	
