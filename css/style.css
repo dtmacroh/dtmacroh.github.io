@@ -565,4 +565,16 @@ label {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+.dropdown-menu li{
+	font-family: font-family: 'Open Sans', sans-serif; 
+	text-transform: uppercase;
+	
+}
+.btn-primary.active, 
+.btn-primary:active, 
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #A30000;
+    border-color: #A30000;
+}
 
