@@ -505,6 +505,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .video{
 	height:70px;
 }
+.header{
+	height:100px;
+	width:100%;
+}
 }
 
 @media (max-width: 603px) {
