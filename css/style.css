@@ -491,12 +491,19 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	color: #0dad8d;
 }
 
+@media (max-width: 5000px) {
+
+.video{
+	height:500px;
+}
+}
+
 @media (max-width: 768px) {
 .content {
 	padding: 40% 0 0;
 }
 .video{
-	height:150px;
+	height:70px;
 }
 }
 
@@ -511,7 +518,7 @@ label {
 	padding: 12% 10%;
 }
 .video{
-	height:100px;
+	height:70px;
 }
 
 }
