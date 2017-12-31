@@ -64,6 +64,11 @@ a:hover, a:focus {
 .clearfix {
 	display: block;
 }
+iframe{
+	width:100%;
+	height:100%;
+	
+}
 ul, ol {
 	padding: 0;
 	webkit-padding: 0;
@@ -134,8 +139,8 @@ header {
 	background-size: cover;
 	color: #cfcfcf;
 	position: relative;
-	height: 100%;
-		width:100%;
+	/*height: 100%;*/
+	width:100%;
 	/* &:before {
     content: '';
 	position: absolute;
@@ -266,11 +271,15 @@ ol.typesocial li {
 }
 .portfolio-item {
 	margin-bottom: 30px;
+	
 }
 .portfolio-item .hover-bg {
 	height: 170px;
 	overflow: hidden;
 	position: relative;
+	border-color:black;
+	border-width:1px;
+	
 }
 
 .hover-bg .hover-text {
@@ -279,7 +288,7 @@ ol.typesocial li {
 	margin: 0 auto;
 	color: #ffffff;
 	background: rgba(0, 0, 0, 0.66);
-	padding: 17% 0 0 0;
+	padding: 17% 7% 7% 7% ;
 	height: 100%;
 	width: 100%;
 	opacity: 0;
@@ -597,5 +606,8 @@ label {
     color: #fff;
     background-color: #A30000;
     border-color: #A30000;
+}
+.keep-ratio{
+	padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
 
