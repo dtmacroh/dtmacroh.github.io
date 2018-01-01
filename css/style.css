@@ -86,7 +86,7 @@ ul, ol {
 	font-size: 15px;
 }
 .custom-list-o{
-	list-style:d;
+	list-style:decimal;
 	margin-left:5%;
 	line-height: 1.6;
 	font-size: 15px;

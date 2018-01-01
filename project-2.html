@@ -76,7 +76,7 @@
 	
 
 <div class="center"  >
-<img src="img/project2/girlscoutbadge.jpeg" alt="Picture" style="width:75%;min-width:300px" />
+<img src="img/project2/beautifulforest.png" alt="Picture" style="width:75%;min-width:300px" />
 </div>
 <br/>
 <div><font size="2">Create an interface that reimagines how people interact with&nbsp;<em>immersive 360-degree video</em>, using a mobile phone and Google Cardboard</font></div>
@@ -372,26 +372,26 @@
 	<h3>Implementation</h3>
 	</div>
 	<p> Implemented with Unity and the Google Cardboard, utilizing multiple 360 videos to create an immersive experience. Some changes from the refinement sketches are as follows:	</p>
-	<div class="col-md-9 col-lg-9">
+		<div class="col-md-7 col-lg-7"><div class="portfolio-item"><div class="hover-bg" style="height:300px">
 	<ul class="custom-list-u"><li>did not have action of kneeling down to plant (time constraints, it is possible to detect kneeling using the Kinect)</li><li>adding voice-over to create a more immersive experience, acting as an inner voice of the user.</li><li>added a horse to the scene instead of animals that are naturally in the wild (constrained by the amount of free assets floating around). Originally planned on having a squirrel or deer sneak up on you.</li><li>did not have a mentor behind user because i struggled to find a free asset that looked like an approachable volunteer/teacher.</li><li>
 	incorporated sounds for each tool, sending feedback to the user that they have chosen the tool.</li></ul>
-	</div>
+	</div></div></div>
+	<div class="col-lg-5 col-md-5"><div class="portfolio-item"><div class="hover-bg" style="height:300px">
+	<img style="width:100%;" src = "img/project2/horse.png" class="img-responsive"/></div></div></div>
 	
-	<div class="col-lg-9 col-md-9">
-	<img src = "img/project2/horse.png"/>
-	</div>
-	<div class="row">
-	<div class="portfolio-items">
-	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3"><div class="portfolio-item"><div class="hover-bg" style="height:230px"><img  style="width:100%;" src = "img/project2/20171017-211915.jpeg"/></div></div></div>
 	
-	<div class="col-xs-6 col-sm-4 col-md-8 col-lg-8"><div class="portfolio-item"><div class="hover-bg" style="height:230px"><p><br/>I printed some Girl Scout badges in color and cut around them, then I cut velcro strips to match the size of the RFID tag. One challenge that I came across is that sticking the velcro's sticky side onto the clear RFID tags will actually destroy the coating of the tag. Instead, I hot glued the tape onto some paper, then stuck the tape onto the tag itself. The other side of the tag is taped on the badge paper itself.</p></div></div></div>
-	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3"><div class="portfolio-item"><div class="hover-bg" style="height:300px"><img  style="width:100%;" src = "img/project2/20171017-165326.jpeg"/></div></div></div>
-	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3"><div class="portfolio-item"><div class="hover-bg" style="height:300px"><p><br/>To implement the squeezing aspect, I chose a force sensitive resistor (FSR) hooked up to an Arduino. From what I've heard, using an FSR on an Arduino is significantly simpler compared to the Raspberry Pi. To simulate actually squeezing the sash, I encapsulated the FSR in foam , tied two rubber bands to it, and hot glued some parts of the foam to make it the FSR stay in place.&nbsp;</p></div></div></div>
-	<div class="col-xs-6 col-sm-4 col-md-6 col-lg-6"><div class="portfolio-item"><div class="hover-bg " style="height:230px;padding-left:5%;padding-right:3%;"><img  style="width:80%;" src = "img/project2/20171017-165344.jpg"/></div><div style="padding-left:5%;padding-right:15%;"><p><br/>I made a little pocket for the RFID reader to hide in, and made a little gap at the bottom for the cord to connect to (from the laptop to the RFID reader)</p></div></div></div>
+
 	
-	</div>
-	</div>
+	<div class="col-xs-6 col-sm-3 col-md-6 col-lg-6"><div class="portfolio-item"><div class="hover-bg" style="height:250px"><img  style="width:100%;" src = "img/project2/firescene.png" class="img-responsive"/></div></div></div>
 	
+	<div class="col-xs-6 col-sm-3 col-md-6 col-lg-6"><div class="portfolio-item"><div class="hover-bg" style="height:250px"><img  style="width:100%;height:100%" src = "img/project2/classroom.png" class="img-responsive"/></div></div></div>
+	<div class="col-xs-6 col-sm-3 col-md-4 col-lg-4"><div class="portfolio-item"><div class="hover-bg" style="height:210px"><img  style="width:100%;height:100%" src = "img/project2/roadtofortmac.png" /></div></div></div>
+	<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"><div class="portfolio-item"><div class="hover-bg" style="height:210px"> <img style="width:100%;height:100%" src = "img/project2/tools.png" /></div></div></div>
+	<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"><div class="portfolio-item"><div class="hover-bg " style="height:210px"><img  style="width:100%;height:100%" src = "img/project2/birdfly.png" /></div></div></div>
+	
+	
+	
+	<ol class="custom-list-o"><li>&nbsp;First scene - you are surrounded by fire. Inner voice mentions that there have been wildfires recently in Fort McMurray and British Columbia, and that she wants to help by planting a tree. Look around and find an option to volunteer for Trees for Canada.</li><li>&nbsp;Classroom scene - you are at the volunteer site (classroom) but nobody is there. You decide to plant a tree yourself.&nbsp;Look around for a "Let's go" option.&nbsp;</li><li>On-boarding scene - road to Fort Mac. Video will end shortly and you will have to look for an option to start planting (on the driver's side of the car).</li><li>&nbsp;Planting scene - it's time to start planting! When scene starts a horse and falcon sound will start. Falcon sound will keep going for approximately ~20 seconds, which is annoying but it happens in real life :). As time passes, the falcon will fly over you. Look for a good spot to plant a tree. To see if path can be selected, hover over and the patch should change its color. Once you select a patch, all your tools should appear beside you (a tree, stick, shovel and watering can). Choose wisely and pick the tools in order. Once you are done, face back and select the option to say you are done planting the tree.</li><li>&nbsp;Depending on if you have done the planting in the correct order, the end scene will either show a beautiful forest or a wasteland.&nbsp;</li></ol>
 	
 	
 </div>
@@ -401,12 +401,12 @@
 	</div>
 	<div class="video">
 		
-	<iframe src="https://www.youtube.com/embed/STdz4UsZpvQ?wmode=opaque" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	<iframe src="https://www.youtube.com/embed/BPzfMq3j_6A?wmode=opaque" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 	</div>
 </div>
 <div id="reflection-section">
 <h3>Final Thoughts</h3>
-<p>Upon receiving feedback for this project, I realized I had to be more specific on what type of Girl Scout will use the sash (experienced vs inexperienced) , and that the interaction space needs to be richer. Maybe for future iterations I could have the sash be used for younger Girl Scouts who are inexperienced, and make the sash help the scout in different situations. This project was challenging for me, not only because it was directed towards hardware which I have no experience of, but because it was not directed towards a specific client, which made it hard to target a specific user. I learned to think of different users first and try to design for them, rather than thinking of different generic problems and try to solve them using wearables. I also in this project that I learned the value of sketching; continuously iterating through your ideas until you have a solid plan of what you want to do.</p>
+<p>One thing I wish i could have done was to integrate more of the story into the implementation. In the classroom scene, I imagined having newspaper clippings or pictures about the wildfire to tell more of that story, and have the user empathize. I also wish I did more with the interactions of the video, using gesture based motions (using a Nintendo Switch Joycon) instead of selecting it through a phone to create a more real and authentic experience. I wanted to be able to get nearer to the patch and have the tools visible when you kneel down to plant, and have different interactions available depending on whether you kneel or stand up.&nbsp;Also, &#8203;Unity was a little bit tree-cky to learn (pun fully intended) which is also accounted for in the implementation and time constraints.</span><br /><br /><span>&#8203;Upon showing the video to my friends, I realize after the fact that it would have been nice to have more guidance in planting the tree. Currently when the user selects a tool other than the shovel 5 times, the voice will suggest to pick the shovel first to dig a hole on the ground. After that, when the user selects something other than the tree 5 times, the voice will suggest to pick the tree next. After this, however, I think more voice overs need to be done to suggest that we need the stick in place for planting, then water the tree after.&nbsp;</span><span>&#8203;&#8203;</p>
 </div>
 <div id="code-section" >	
 	<div class="section-title center">
@@ -423,7 +423,7 @@
 	<h3>Sources</h3>
 	<p>
 	Without these sources, I could not have gotten this project done. Thank you!<br /></p>
-	Base Code:<ol class="custom-list-o"><li>General Template for my project - check out Kevin Ta's <a href="https://github.com/kevinta893/NetworkIt/releases/download/1.0.0/NetworkIt.360.Cardboard-UnityPackage-Template-v1.0.zip" target="_blank">template</a>, his releases page is <a href="https://github.com/kevinta893/NetworkIt/releases" target="_blank">here</a>.</li></ol>Video Sources:<ol><li><a href="https://www.youtube.com/watch?v=BZxbQz-It7g" target="_blank">Classroom video</a></li><li><a href="https://www.youtube.com/watch?v=2a8NKSnsNWg" target="_blank">Road to Fort Mac, Tree Planting Scene</a></li><li><a href="https://www.youtube.com/watch?v=xHAMY65T-Zc" target="_blank">Nice Forest</a></li><li><a href="https://www.youtube.com/watch?v=vQTJ_-ZL_Lc&amp;t=36s" target="_blank">Wasteland</a></li><li><a href="https://www.youtube.com/watch?v=ieWT8TgScuo" target="_blank">Wildfire</a></li></ol><br />3D Assets:<ol><li><a href="https://www.assetstore.unity3d.com/en/#!/content/16687" target="_blank">Horse in tree planting scene&nbsp;</a></li><li><a href="https://www.assetstore.unity3d.com/en/#!/content/18866" target="_blank">Tree in tree planting scene</a></li><li><a href="https://www.assetstore.unity3d.com/en/#!/content/68960" 
+	Base Code:<ol class="custom-list-o"><li>General Template for my project - check out Kevin Ta's <a href="https://github.com/kevinta893/NetworkIt/releases/download/1.0.0/NetworkIt.360.Cardboard-UnityPackage-Template-v1.0.zip" target="_blank">template</a>, his releases page is <a href="https://github.com/kevinta893/NetworkIt/releases" target="_blank">here</a>.</li></ol>Video Sources:<ol><li><a href="https://www.youtube.com/watch?v=BZxbQz-It7g" target="_blank">Classroom video</a></li><li><a href="https://www.youtube.com/watch?v=2a8NKSnsNWg" target="_blank">Road to Fort Mac, Tree Planting Scene</a></li><li><a href="https://www.youtube.com/watch?v=xHAMY65T-Zc" target="_blank">Nice Forest</a></li><li><a href="https://www.youtube.com/watch?v=vQTJ_-ZL_Lc&amp;t=36s" target="_blank">Wasteland</a></li><li><a href="https://www.youtube.com/watch?v=ieWT8TgScuo" target="_blank">Wildfire</a></li></ol><br />3D Assets:<ol><li><a href="https://www.assetstore.unity3d.com/en/#!/content/16687" target="_blank">Horse in tree planting scene&nbsp;</a></li><li><a href="https://www.assetstore.unity3d.com/en/#!/content/18866" target="_blank">Tree in tree planting scene</a></li><li><a href="https://www.assetstore.unity3d.com/en/#!/content/68960"> 
 	</div>
 </div>
 	
