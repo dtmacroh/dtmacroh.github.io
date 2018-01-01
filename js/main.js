@@ -3,7 +3,10 @@ function main() {
 
 (function () {
    'use strict';
-
+	$(document).ready(function () {
+		 $('#navigation').load('navbar.html');
+		//alert("hi");
+	});
    /* ==============================================
   	Testimonial Slider
   	=============================================== */ 
@@ -79,6 +82,7 @@ function main() {
 			time: 1000 // the speed time in ms
 			});
 		}
+		
 	});
 	
   	/*====================================
@@ -87,7 +91,8 @@ function main() {
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 		social_tools: false
 	});	
-
+	
+	
 }());
 
 

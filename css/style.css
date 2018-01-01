@@ -32,7 +32,8 @@ h5 {
 p {
 	font-family: 'Open Sans', sans-serif; 
 	/* font-family: 'Quicksand', sans-serif; */
-	 line-height: 1.6;
+	line-height: 1.6;
+	font-size: 15px;
 	
 }
 article{
@@ -78,14 +79,17 @@ ul, ol {
 	list-style: none;
 	font-family: 'Open Sans', sans-serif; 
 }
-custom-list-u{
-	list-style:circle;
-	margin-left:3%
-
+.custom-list-u{
+	list-style:inherit;
+	margin-left:5%;
+	line-height: 1.6;
+	font-size: 15px;
 }
-custom-list-o{
+.custom-list-o{
 	list-style:d;
-	margin-left:3%
+	margin-left:5%;
+	line-height: 1.6;
+	font-size: 15px;
 }
 hr {
 	height: 3px;
