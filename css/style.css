@@ -32,6 +32,7 @@ h5 {
 p {
 	font-family: 'Open Sans', sans-serif; 
 	/* font-family: 'Quicksand', sans-serif; */
+	 line-height: 1.6;
 	
 }
 article{
@@ -77,12 +78,12 @@ ul, ol {
 	list-style: none;
 	font-family: 'Open Sans', sans-serif; 
 }
-ul .custom-list{
+custom-list-u{
 	list-style:circle;
 	margin-left:3%
 
 }
-ol .custom-list{
+custom-list-o{
 	list-style:d;
 	margin-left:3%
 }
