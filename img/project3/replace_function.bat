@@ -1,8 +1,8 @@
 @echo off
 Setlocal enabledelayedexpansion
 
-Set "Pattern= "
-Set "Replace="
+Set "Pattern=_"
+Set "Replace=-"
 
 For %%a in (*.jpg) Do (
     Set "File=%%~a"

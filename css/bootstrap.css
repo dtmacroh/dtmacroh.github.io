@@ -1637,6 +1637,19 @@ pre code {
 .col-xs-1 {
   width: 8.33333333%;
 }
+/* Added columns divisible by 5*/
+.col-xs-5ths {
+  width: 20%;
+}
+.col-sm-5ths {
+  width: 20%;
+}
+.col-md-5ths {
+  width: 20%;
+}
+.col-lg-5ths {
+  width: 20%;
+}
 .col-xs-pull-12 {
   right: 100%;
 }
@@ -6563,5 +6576,40 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
 }
 /*# sourceMappingURL=bootstrap.css.map */
