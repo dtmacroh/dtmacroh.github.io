@@ -104,23 +104,135 @@
 	</div>
 	
 	<div class="col-sm-12 col-md-10" style="padding-bottom:30px">
-    <p>This project was meant to vizualize crime in Calgary, and other municipalities within Alberta, Canada.
-      I chose to do this project with the initial intent to see if Forest Lawn, a community in Calgary that I live in, is safe. 
-      Since then, I have refocused my intentions to have a more exploratory approach of the data set. Here are the
-      questions I am most interested in answering:</p>
-      <ul style="list-style:circle;margin-left:3%">
-      <li>Are older residential communities more prone to crime in Calgary
-        (when it was built, sectors in the city)> Does it differ depending on the type of crime?</li>
-      <li>What crime is the most prevalent in each city? Are there any differences in crime between municipalities?</li>
-      <li>What is the ratio of adult vs youth charged with committing crimes, on average? 
-        Does it change drastically depending on the crime? </li>
-      <li>What are the top 2 crimes in Alberta that are strongly correlated with one another? </li>
-      <li>Is there a month or year that crime rises in Calgary? 
-        (e.g. before Christmas, after New Year’s where debt is high, summer where the weather is good, recessions)</li>
-      <li></li>
-      </ul>
+    <p>This project is meant to vizualize crime in Calgary, and other municipalities within Alberta, Canada. Tools used were
+      Excel, Tableau, and Jupyter Anaconda (Python).</p>
+     
 </div>
-	
+
+<div id="intro">
+    <div class="center">
+        <h3 >Analysis Questions</h3>
+    </div>
+  <div class="center">
+  <p> I chose to do this project with the initial intent to see if Forest Lawn, a community in Calgary that I live in, is safe. 
+    Since then, I have refocused my intentions to have a more exploratory approach of the data set. Here are the
+    revised questions I am most interested in answering and analyzing:</p>
+    <ol class="custom-list-o">
+    <li>Are older residential communities more prone to crime in Calgary
+      (when it was built, sectors in the city)? Does it differ depending on the type of crime?</li>
+    <li>What crime is the most prevalent in each city? Are there any differences in crime between municipalities?</li>
+    <li>What is the ratio of adult vs youth charged with committing crimes, on average? 
+      Does it change drastically depending on the crime? </li>
+    <li>What are the top 2 crimes in Alberta, on a province-wide level (includes Alberta and all its cities within, such as Calgary,
+      Chestermere, Edmonton and Medicine Hat) that are strongly correlated with one another, by year from 1998 to 2016? 
+      We will hone in on correlations with records that have STAs in (Actual Incidents, Total Persons Charged, 
+      Total Adult Charged, Total Youth Charged).</li>
+    <li>Is there a month or year that crime rises in Calgary? 
+      (e.g. before Christmas, after New Year’s where debt is high, summer where the weather is good, recessions)</li>
+    <li>Imagine that in 2008, you lived in Medicine Hat and got job offers in both Calgary and Edmonton. You are a single parent and 
+      have young two children living with you. As of 2008, looking at average rate of all crimes of abduction,  corrupting morals of a child,
+      luring a child via computer, Obtains or communicates with a person under age 18 for purpose of sex, and hostage taking, which location has the lowest
+      average counts of all crimes out of the three (Calgary, Edmonton, Medicine Hat)? 
+
+       </li>        
+    </ol>
+    <div class="center">
+        <h3 >Project 1.1 Recap and Changes</h3>
+    </div>
+    <p>The only questions that changed from Project 1.1 were questions [4] and [6], which were originally:</p>
+       <ol>
+         <li>[4] What are the top 2 crimes that are strongly correlated with one another? 
+           Which crimes can predict a violent crime such as first-degree murder?</li>
+         <li>[6] Is Calgary becoming a more dangerous city? Based on the answers to the 
+         questions above, and based on the crime statistics alone, would you decide to live in Calgary and if so where? </li></ol>
+    <p>I changed question [4] because it needed more detail about the level 
+      of analysis. It was unclear whether the correlations were for the city level, 
+      neighborhood level, or if it was by year or month. I since have made it clearer by specifying that it was by municipality level
+    with </p>
+     <p>I changed question [6] because using the term "you" is very subjective. 
+       The question doesn't have a clear sense of who we're talking about and what their tolerances are, 
+       it isn't clear how a question like this can be answered.</p>
+    </div>    
+</div>
+
+<div id="q1">
+    <div class="center">
+        <h3 >Question 1</h3>
+    </div>
+    <b><i>"Are older residential communities more prone to crime in Calgary (when it was built, sectors in the city)?"</i></b>
+    <div class="center">
+        <h4 >Analysis Process and Interpretation</h4>
+    </div>
+    <p>I can accomplish this by combining the community file and the Calgary shape file, then having community structure in as the x-axis, 
+      and the sum of the crime count (value) in the y-axis. The data will be filtered by the class (filtering it down to just residential 
+      and residential sub area, as noted below. The chart will be detailed by community, each community will have the sector encoded as a 
+      different color, and the number of crimes will be encoded as the size. Hence, the more crimes associated with a community, the bigger 
+      the circle will be. To illustrate:</p>
+
+      <p>It seems that the community with the most crime in each time period that the communities were built (e.g. 1950s, 1960s/1970s, 
+        1980s/1990s, 2000s, and Building Out) does seems to follow a downward trend of crime, the newer the community is.  However, 
+        when we look at the average number of crimes per time period, we see that there is a slight downward trend between 1960s and 
+        onwards, but communities in the 1950s actually have a lower average crime count than the 1960s/1970s.  Iterating through the 
+        different crimes, the averages are pretty similar across all crimes except for social disorder: </p>
+    
+</div>
+<div id="q2">
+    <div class="center">
+        <h3>Question 2</h3>
+    </div>
+    <div class="center">
+        <h4 >Analysis Process</h4>
+    </div>
+    <div class="center">
+        <h4 >Interpretation of Results</h4>
+    </div>
+</div>
+<div id="q3">
+    <div class="center">
+        <h3 >Question 3</h3>
+    </div>
+    <div class="center">
+        <h4 >Analysis Process</h4>
+    </div>
+    <div class="center">
+        <h4 >Interpretation of Results</h4>
+    </div>
+</div>
+<div id="q4">
+    <div class="center">
+        <h3 >Question 4</h3>
+    </div>
+    <div class="center">
+        <h4 >Analysis Process</h4>
+    </div>
+    <div class="center">
+        <h4 >Interpretation of Results</h4>
+    </div>
+</div>
+<div id="q5">
+    <div class="center">
+        <h3 >Question 5</h3>
+    </div>
+    <div class="center">
+        <h4 >Analysis Process</h4>
+    </div>
+    <div class="center">
+        <h4 >Interpretation of Results</h4>
+    </div>
+</div>
+<div id="q6">
+    <div class="center">
+        <h3 >Question 6</h3>
+    </div>
+    <div class="center">
+        <h4 >Analysis Process</h4>
+    </div>
+    <div class="center">
+        <h4 >Interpretation of Results</h4>
+    </div>
+</div>
+
+
 </div>
 </div>
 
