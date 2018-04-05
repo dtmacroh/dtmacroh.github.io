@@ -129,9 +129,8 @@
       Total Adult Charged, Total Youth Charged).</li>
     <li>Is there a month or year that crime rises in Calgary? 
       (e.g. before Christmas, after New Year’s where debt is high, summer where the weather is good, recessions)</li>
-    <li>Imagine that in 2008, you lived in Medicine Hat and got job offers in both Calgary and Edmonton. You are a single parent and 
-      have young two children living with you. As of 2008, looking at average rate of all crimes of abduction,  corrupting morals of a child,
-      luring a child via computer, Obtains or communicates with a person under age 18 for purpose of sex, and hostage taking, which location has the lowest
+    <li>Imagine that in 2008, you lived in Medicine Hat and got job offers in both Calgary and Edmonton. You have young two children living with you. 
+      As of 2008, looking at total rate of all crimes against children, which location has the lowest
       average counts of all crimes out of the three (Calgary, Edmonton, Medicine Hat)? 
 
        </li>        
@@ -161,7 +160,7 @@
     </div>
     <b><i>"Are older residential communities more prone to crime in Calgary (when it was built, sectors in the city)?"</i></b>
     <div class="center">
-        <h4 >Analysis Process and Interpretation</h4>
+        <h4>Analysis Process and Interpretation</h4>
     </div>
     <p>I started off by filtering out the communities that were not residential. In the Calgary shape file data set, values I 
       included from the column COMM STRUC are 1950s, 1960s/1970s, 1980s/1990s, 2000s, and Building Out. Values that I excluded Centre City, Inner City, Employment,
@@ -180,14 +179,12 @@
 
     <div class="col-sm-12 col-md-12 col-lg-12">
         
-          <div class="hover-bg"> <a href="img/datavis/bySectorCommStruc.png" rel="prettyPhoto">
-            <div class="hover-text">
+          <div class="hover-bg"> <a href="img/datavis/bySectorCommStruc.png" rel="prettyPhoto">   
               <small>Yearly Average Crime Count by Time Period Built - The labels are visible on the maximum and minimum values
                 by time period. The size of the data point is attributed to how large the yearly average crime count is for that 
                 specific community.
               </small>
               <div class="clearfix"></div>
-            </div>
             <img src="img/datavis/bySectorCommStruc.png" class="img-responsive" > </a> </div>
       
       </div>
@@ -195,77 +192,116 @@
       <p>It seems that the community with the most crime in each time period that the communities were built (e.g. 1950s, 1960s/1970s, 
         1980s/1990s, 2000s, and Building Out) does seems to follow a downward trend of crime, the newer the community is.  However
         when we look at the average number of crimes per time period, we see that there is a slight downward trend between 1960s and 
-        onwards, but communities in the 1950s actually have a lower average crime count than the 1960s/1970s.   </p>
+        onwards, but communities in the 1950s actually have a lower average crime count than the 1960s/1970s. Looking at the averages,
+      I wondered if the different number of communities was affecting the averages.  </p>
         <p>Breaking it off and looking at it by sector, and by time period:</p>
 
         <div class="col-sm-6 col-md-6 col-lg-6">
         
             <div class="hover-bg"> <a href="img/datavis/mapSector.png" rel="prettyPhoto">
-              <div class="hover-text">
                 <small>Yearly Average Crime Count by Sector
                 </small>
                 <div class="clearfix"></div>
-              </div>
+             
               <img src="img/datavis/mapSector.png" class="img-responsive" > </a> </div>
         
         </div>
 
         <div class="col-sm-6 col-md-6 col-lg-6">
         
-            <div class="hover-bg"> <a href="img/datavis/bySectorCrimeandCommunity1.png" rel="prettyPhoto">
-              <div class="hover-text">
+            <div class="hover-bg"> <a href="img/datavis/byTimePeriodCommunity.png" rel="prettyPhoto">
+              
                 <small>Yearly Average Crime Count by Sector
                 </small>
                 <div class="clearfix"></div>
-              </div>
-              <img src="img/datavis/bySectorCrimeandCommunity1.png" class="img-responsive" > </a> </div>
+             
+              <img src="img/datavis/byTimePeriodCommunity.png" class="img-responsive" > </a> </div>
         
         </div>
-    
+        
+            <p>It seems like by sector, the northeast has the highest average yearly crime rate, with the south being a 
+              close second. When we split the data up by time period communities were built, and have the average yearly crime
+              for each sector on a separate y-axis, it seems like in the 1960s/1970s there were 45 communities built, while
+              in the 1950s there were 44. Looking at the graph below it seems like the the older communities, especially 
+              ones built in 1960s/1970s, had a higher average yearly crime count. It also looks like sectors like the northeast and
+              south had the most overall yearly crime.
+            </p>
 </div>
 <div id="q2">
     <div class="center">
         <h3>Question 2</h3>
     </div>
+    <b><i>"What crime is the most prevalent in each city? Are there any differences in crime between municipalities?"</i></b>
     <div class="center">
-        <h4 >Analysis Process</h4>
+        <h4>Analysis Process and Interpretation</h4>
     </div>
-    <div class="center">
-        <h4 >Interpretation of Results</h4>
-    </div>
+    
 </div>
 <div id="q3">
     <div class="center">
         <h3 >Question 3</h3>
     </div>
+    <b><i>"What is the difference in rate of youth vs adult charged with committing crimes, on average in Alberta? 
+        Does it change noticeably depending on the crime? "</i></b>
+   
     <div class="center">
-        <h4 >Analysis Process</h4>
+        <h4>Analysis Process and Interpretation</h4>
     </div>
-    <div class="center">
-        <h4 >Interpretation of Results</h4>
-    </div>
+    <p>This can be done by using the augmented “By Crime” data set, with the values "Rate Youth charged per 
+      100 000 population" subtracted with "Rate Adult charged per 100 000 population", and setting this 
+      as a new calculation field. I filtered in all values with Alberta as the location, and filtered out 
+      youth specific crimes like Youth Criminal Justice Act. I computed the yearly average difference in rate
+      and placed them in the bar chart. Positive values will denote a blue hue while negative values will have a 
+      red hue. Youth in this case will be all persons under 18.
+      </p>
+
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        
+          <div class="hover-bg"> <a href="img/datavis/youthToAdultRatio.png" rel="prettyPhoto">
+           
+              <small>Youth to Adult Comparisons of Crime in Alberta
+              </small>
+              <div class="clearfix"></div>
+          
+            <img src="img/datavis/youthToAdultRatio.png" class="img-responsive" > </a> </div>
+      
+      </div>
+      <p>Personally, the results make a lot of sense. Breaking and Entering, Shoplifting and Theft $5,000 or under
+        would have more youth commiting these crimes maybe because of peer pressure, or to make themselves seem 
+        cooler. Not to mention youth committing these crimes probably are not so smart in the manner of executing
+        these crimes, which makes them more likely to get caught. On the other end of the spectrum, more adults get
+        caught driving while prohibited or impaired operation of a motor vehicle likely because not as many 
+        young people have their driver's license. Adults do more fraud related crimes likely because they know there is much more to gain
+        from them, compared to young people's knowledge. Adults generally have more money and assets, and can probably 
+        impersonate other adults better than youth can. In gerneral it seems like petty crimes are committed more by young people,
+        and crimes that need driver's licenses or a higher level of thinking (fraud) are committed by adults.
+        
+      </p>
 </div>
 <div id="q4">
     <div class="center">
         <h3 >Question 4</h3>
     </div>
+    <p>What are the top 2 crimes in Alberta, on a province-wide level (includes Alberta and all its cities within, 
+    such as Calgary, Chestermere, Edmonton and Medicine Hat) that are strongly correlated with one another, by 
+    year from 1998 to 2016? We will hone in on correlations with records that have STAs in (Actual Incidents, 
+    Total Persons Charged, Total Adult Charged, Total Youth Charged).</p>
     <div class="center">
-        <h4 >Analysis Process</h4>
+        <h4 >Analysis Process and Interpretation</h4>
     </div>
-    <div class="center">
-        <h4 >Interpretation of Results</h4>
-    </div>
+   
 </div>
 <div id="q5">
     <div class="center">
         <h3 >Question 5</h3>
     </div>
+    <p>Is there a month or year that crime rises in Calgary? 
+        (e.g. before Christmas, after New Year’s where debt is high,
+         summer where the weather is good, recessions)</p>
     <div class="center">
-        <h4 >Analysis Process</h4>
+        <h4 >Analysis Process and Interpretation</h4>
     </div>
-    <div class="center">
-        <h4 >Interpretation of Results</h4>
-    </div>
+    
 </div>
 <div id="q6">
     <div class="center">
