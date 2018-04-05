@@ -98,7 +98,7 @@
 	
 	<h2 ><font color="#508d24">Visualizing Crime in Calgary and Inter-Alberta Municipalities</font></h2>
 	</div>
-
+<div class="container">
 	<div class="col-sm-12 col-md-2 left" >					
 	<h2 ><strong><font size="3">Description</font></strong></h2>
 	</div>
@@ -163,17 +163,64 @@
     <div class="center">
         <h4 >Analysis Process and Interpretation</h4>
     </div>
-    <p>I can accomplish this by combining the community file and the Calgary shape file, then having community structure in as the x-axis, 
-      and the sum of the crime count (value) in the y-axis. The data will be filtered by the class (filtering it down to just residential 
-      and residential sub area, as noted below. The chart will be detailed by community, each community will have the sector encoded as a 
-      different color, and the number of crimes will be encoded as the size. Hence, the more crimes associated with a community, the bigger 
-      the circle will be. To illustrate:</p>
+    <p>I started off by filtering out the communities that were not residential. In the Calgary shape file data set, values I 
+      included from the column COMM STRUC are 1950s, 1960s/1970s, 1980s/1990s, 2000s, and Building Out. Values that I excluded Centre City, Inner City, Employment,
+      Other, Parks and Undeveloped, because they do not inform of what time period communities were built. In the column Class, values I 
+      included are Residential and Residential Sub, while I excluded Industrial and Major Park. I made a quick graph to illustrate the average
+    yearly crime over the time period that these communities were built, each color representing a sector (North, South, Southeast, etc.).
+    The yearly crime is calculated by the aggregating the sum of the crime counts (Value column) from 2012 to 2017 divided by the number of 
+    distinct Years (around 6).</p>
+<p>
+    Some of the limitations here is that not all communities have data from 2012 (some started in 2013), so the averages for such communities
+    will be slightly smaller. Census data for each of the communities will also be helpful to normalize the data more but due to time contraints I was not able to 
+    integrate this. As such, the averages for sections with outliers (e.g. Forest Lawn built in the 1950s) will pull up the average a lot, since
+    it has a much higher value than all the other communities in the same time period.
 
+    </p>
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        
+          <div class="hover-bg"> <a href="img/datavis/bySectorCommStruc.png" rel="prettyPhoto">
+            <div class="hover-text">
+              <small>Yearly Average Crime Count by Time Period Built - The labels are visible on the maximum and minimum values
+                by time period. The size of the data point is attributed to how large the yearly average crime count is for that 
+                specific community.
+              </small>
+              <div class="clearfix"></div>
+            </div>
+            <img src="img/datavis/bySectorCommStruc.png" class="img-responsive" > </a> </div>
+      
+      </div>
+    
       <p>It seems that the community with the most crime in each time period that the communities were built (e.g. 1950s, 1960s/1970s, 
-        1980s/1990s, 2000s, and Building Out) does seems to follow a downward trend of crime, the newer the community is.  However, 
+        1980s/1990s, 2000s, and Building Out) does seems to follow a downward trend of crime, the newer the community is.  However
         when we look at the average number of crimes per time period, we see that there is a slight downward trend between 1960s and 
-        onwards, but communities in the 1950s actually have a lower average crime count than the 1960s/1970s.  Iterating through the 
-        different crimes, the averages are pretty similar across all crimes except for social disorder: </p>
+        onwards, but communities in the 1950s actually have a lower average crime count than the 1960s/1970s.   </p>
+        <p>Breaking it off and looking at it by sector, and by time period:</p>
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+        
+            <div class="hover-bg"> <a href="img/datavis/mapSector.png" rel="prettyPhoto">
+              <div class="hover-text">
+                <small>Yearly Average Crime Count by Sector
+                </small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="img/datavis/mapSector.png" class="img-responsive" > </a> </div>
+        
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+        
+            <div class="hover-bg"> <a href="img/datavis/bySectorCrimeandCommunity1.png" rel="prettyPhoto">
+              <div class="hover-text">
+                <small>Yearly Average Crime Count by Sector
+                </small>
+                <div class="clearfix"></div>
+              </div>
+              <img src="img/datavis/bySectorCrimeandCommunity1.png" class="img-responsive" > </a> </div>
+        
+        </div>
     
 </div>
 <div id="q2">
@@ -235,7 +282,7 @@
 
 </div>
 </div>
-
+</div>
 <div id="footer">
   <div class="container">
     <div class="fnav">
