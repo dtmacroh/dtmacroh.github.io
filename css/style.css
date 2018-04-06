@@ -296,6 +296,14 @@ ol.typesocial li {
 	border-width:1px;
 	
 }
+.portfolio-item .hover-bgA {
+	height: 290px;
+	overflow: hidden;
+	position: relative;
+	border-color:black;
+	border-width:1px;
+	
+}
 .portfolio-item .datavis-bg {
 	height: 300px;
 	overflow: hidden;
