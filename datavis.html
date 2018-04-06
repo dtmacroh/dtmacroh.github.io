@@ -351,7 +351,29 @@
         <h4 >Analysis Process and Interpretation</h4>
     </div>
     <p>For this question, I used the "By STA" data set and the tool Jupyter Anaconda to calculate the correlations between all
-      the possible crimes. I sorted the correlations in descending order and exported the results to Excel. </p>
+      the possible crimes. Here are the commands I used:</p>
+      <pre>
+      <font color="green"># imports</font>
+      <font color="green">import</font> pandas as pd
+      <font color="green">import</font> numpy as np
+      <font color="green">import</font> matplotlib.pyplot as plt
+      <font color="green">import</font> itertools as it
+            
+      <font color="green"># this allows plots to appear directly in the notebook</font>  
+      %matplotlib inline
+            
+      d = pd.read_excel('some_alberta_pivoted.xlsx', index_col=0) <font color="green"># retrieve the data</font>
+      corr=d.corr() <font color="green"># find correlations using built in correlation function</font>
+      corr
+      ndf = pd.DataFrame([], columns=list("ABCD"))
+      for c in corr.columns:
+          for r in corr.index:
+              df2 = pd.DataFrame([[str(c)+" , "+ str(r), corr[c][r],c, r]], columns=list("ABCD"))
+              ndf = ndf.append(df2)
+      
+      ndf.to_csv("corr.csv")
+        </pre>
+     <p> I sorted the correlations in descending order and exported the results to Excel. </p>
       <div class="col-sm-12 col-md-12 col-lg-12">
         
           <div class="hover-bg"> <a href="img/datavis/corr2.png" rel="prettyPhoto">
@@ -366,8 +388,10 @@
 
       <p>Initially, I had high hopes that the top correlation pair was actually correlated. However when I later plotted the values in a
           correlation chart, I found out only two data points in the chart. Confused, I did some investigation by summing 
-          up the total number occurences per crime, per year and extracted the minimum number of occurences for the pair of crimes.
-          what I found was for the top correlated crimes, there were 2 counts of Common Bawdy House and 14 counts of distribution of child 
+          up the total number occurences per crime, per year and extracted the minimum number of occurences for the pair of crimes.These counts
+          were extracted by filtering in STAs in (Actual Incidents, 
+          Total Persons Charged, Total Adult Charged, Total Youth Charged), while filtering out the rates and the percentage change
+        to avoid confusion. What I found was for the top correlated crimes, there were 2 counts of Common Bawdy House and 14 counts of distribution of child 
           pornography. The next 2 had few numbers as well, 4 and 15 respectively. Considering these numbers I cannot assume these crimes
           are actually correlated because the number of occurences are too low. 
         
@@ -384,12 +408,10 @@
       
       </div>
       <p>It turns out the highest pair of crimes that are most likely correlated is breaking and entering, and theft 5,000 or under.
+          Looking at the minimum count for both these crimes, we get 500 counts which I think is a reasonably high amount. 
           
         </p>
-      <p>
-      We will hone in on records that have STAs in (Actual Incidents, 
-        Total Persons Charged, Total Adult Charged, Total Youth Charged), while filtering out the rates and the percentage change
-      to avoid confusion. </p>
+     
       <div class="col-sm-12 col-md-12 col-lg-12">
         
           <div class="hover-bg"> <a href="img/datavis/correlation1.png" rel="prettyPhoto">
@@ -441,6 +463,29 @@
       </div>
     </div>
 
+    <div class="row">
+    <div class="centre">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+        
+            <div class="hover-bg"> <a href="img/datavis/crimeBySeason.png" rel="prettyPhoto">
+             
+                <small>Top correlation seems to be Common Bawdy House and Making and Distribution of Child Pornography.
+                </small>
+                <div class="clearfix"></div>
+            
+              <img src="img/datavis/crimeBySeason.png" class="img-responsive" > </a> </div>
+        
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <pre>The following seasons (in Canada) are made up of the following months:
+                    
+                Spring is from March to May
+                Summer is from June to August
+                Fall is from September to November
+                Winter is from December to February
+        </pre></div>
+    </div>
+    </div>
    
     
 </div>
@@ -465,6 +510,7 @@
     <div class="fnav">
       <p>Copyright &copy; Debbie Macrohon. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
 	  <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+      <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
     </div>
   </div>
 </div>
