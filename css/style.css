@@ -6,6 +6,10 @@ body, html {
 }
 h1 {
 }
+caption{
+	margin:5%;
+	padding: 5%;
+}
 h1 strong {
 	font-weight: 900;
 }

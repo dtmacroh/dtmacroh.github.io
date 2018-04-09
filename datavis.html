@@ -175,19 +175,20 @@
     it has a much higher value than all the other communities in the same time period.
 
     </p>
-
+    <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12">
-            <small>Yearly Average Crime Count by Time Period Built - The labels are visible on the maximum and minimum values
-                    by time period. The size of the data point is attributed to how large the yearly average crime count is for that 
-                    specific community.
-                  </small>
+            
           <div class="hover-bg"> <a href="img/datavis/bySectorCommStruc.png" rel="prettyPhoto">   
               
               <div class="clearfix"></div>
             <img src="img/datavis/bySectorCommStruc.png" class="img-responsive" > </a> </div>
       
       </div>
-    
+      <small>Yearly Average Crime Count by Time Period Built - The labels are visible on the maximum and minimum values
+            by time period. The size of the data point is attributed to how large the yearly average crime count is for that 
+            specific community.
+      </small>
+    </div>
       <p>It seems that the community with the most crime in each time period that the communities were built (e.g. 1950s, 1960s/1970s, 
         1980s/1990s, 2000s, and Building Out) does seems to follow a downward trend of crime, the newer the community is.  However
         when we look at the average number of crimes per time period, we see that there is a slight downward trend between 1960s and 
@@ -195,7 +196,7 @@
       I wondered if the different number of communities was affecting the averages.  </p>
         <p>Breaking it off and looking at it by sector, and by time period:</p>
         <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class= "portfolio-item">
             <div class="Q1A"> <a href="img/datavis/mapSector.png" rel="prettyPhoto">
                 
@@ -207,7 +208,7 @@
                 </div>
         </div>
 
-        <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class= "portfolio-item">
             <div class="Q1A"> <a href="img/datavis/byTimePeriodCommunity.png" rel="prettyPhoto">
               
@@ -216,6 +217,17 @@
                 <div class="clearfix"></div>
              
               <img src="img/datavis/byTimePeriodCommunity.png" class="img-responsive" > </a> </div>
+                </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class= "portfolio-item">
+            <div class="Q1A"> <a href="img/datavis/bySector.png" rel="prettyPhoto">
+              
+                <small>Yearly Average Crime Count by Sector
+                </small>
+                <div class="clearfix"></div>
+             
+              <img src="img/datavis/bySector.png" class="img-responsive" > </a> </div>
                 </div>
         </div>
     </div>
@@ -265,6 +277,7 @@
               </div></div>
               
           </div>
+         
           <div class="col-sm-12 col-md-3 col-lg-3">
               <div class= "portfolio-item">
               <div class="hover-bgA"> <a href="img/datavis/streetrobbery.png" rel="prettyPhoto">
@@ -278,7 +291,13 @@
           </div></div>
           
       </div>
-
+      <p> Here are some crimes by sector, still filtered with the values mentioned earlier. The Northeast and 
+            South seem to have the most crimes, but again this is expected because the south has the most residential communities. Even 
+            though the Northeast has less communities than the north and west, it still has more overall crime which is pretty interesting.
+            Other data needs to be integrated to this data source to find out why this is the case.
+        </p>
+     
+      <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12">
         
         <div class="hover-bgA"> <a href="img/datavis/yearlyavgByTimePeriod.png" rel="prettyPhoto">
@@ -290,6 +309,7 @@
           <small>Types of Crime By Time Period Built
         </small>
   </div>
+</div>
 </div>
 <div id="q2">
     <div class="center">
@@ -426,15 +446,6 @@
             <img src="img/datavis/corr3.png" class="img-responsive" > </a> </div>
       
       </div>
-      <p>It turns out the highest pair of crimes that are most likely correlated is breaking and entering, and theft 5,000 or under.
-          Looking at the minimum count for both these crimes, we get 500 counts which I think is a reasonably high amount. The correlation
-          pair for me makes sense because if you are going to steal something, it most likely is in a building of some sort that you have
-          to break and enter to. My hypothesis is, based on what we saw earlier more youth commit break and enter crimes, thus most likely don't have access to cars
-          which means that tha value of the things that they steal are most likely things that need to be carried on foot. Another 
-          assumption that I have is that a lot of individual things in a house don't actually cost more than $5,000. If they do,
-          it's likely that they can't be easily stolen.
-          
-        </p>
      
       <div class="col-sm-12 col-md-12 col-lg-12">
         
@@ -447,6 +458,16 @@
             <img src="img/datavis/correlation1.png" class="img-responsive" > </a> </div>
       
       </div>
+      <p>It turns out the highest pair of crimes that are most likely correlated is breaking and entering, and theft 5,000 or under.
+            Looking at the minimum count for both these crimes, we get 500 counts which I think is a reasonably high amount. The correlation
+            pair for me makes sense because if you are going to steal something, it most likely is in a building of some sort that you have
+            to break and enter to. My hypothesis is, based on what we saw earlier more youth commit break and enter crimes, thus most likely don't have access to cars
+            which means that tha value of the things that they steal are most likely things that need to be carried on foot. Another 
+            assumption that I have is that a lot of individual things in a house don't actually cost more than $5,000. If they do,
+            it's likely that they can't be easily stolen.
+            
+          </p>
+       
    
 </div>
 <div id="q5">
@@ -459,7 +480,10 @@
     <div class="center">
         <h4 >Analysis Process and Interpretation</h4>
     </div>
-
+    <p>My process for this question was pretty straightforward: I plotted the months along the x-axis (column list) and the average
+        value for each month along the y-axis (row set). The averages were done by taking the sum of the values divided by the number of distinct
+        years, which in this case is 18 (1998- 2016), and is further separated into averages for each month from the column list. 
+    </p>
     <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="portfolio-item">
         <div class="datavis-bg"> <a href="img/datavis/calgaryCrimeMonth.png" rel="prettyPhoto">
@@ -470,6 +494,9 @@
           <img src="img/datavis/calgaryCrimeMonth.png" class="img-responsive" > </a> </div>
 
         </div>
+        <small>A simple graph denoting the average crime count per month in Calgary. Crime peaks in July
+            and is lowest in February.
+        </small>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="portfolio-item">
@@ -482,10 +509,12 @@
          
       </div>
       <small>Average Highs and Lows of Temperature in Calgary - retrieved by a simple look up of 
-            "average monthly temperature calgary" using Google Search
+            "average monthly temperature calgary" using Google Search... April is not supposed to be
+            highlighted but I can't change the settings for Google Search graphs! Please disregard 
+            the highlighting.
             </small>
     </div>
-
+    <p></p>
     <div class="row">
     <div class="centre">
         <div class="col-sm-12 col-md-12 col-lg-12">
