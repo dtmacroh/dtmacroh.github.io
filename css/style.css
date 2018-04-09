@@ -304,6 +304,14 @@ ol.typesocial li {
 	border-width:1px;
 	
 }
+.portfolio-item  Q1A {
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	border-color:black;
+	border-width:1px;
+	
+}
 .portfolio-item .datavis-bg {
 	height: 300px;
 	overflow: hidden;

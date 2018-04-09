@@ -129,9 +129,8 @@
       Total Adult Charged, Total Youth Charged).</li>
     <li>Is there a month or year that crime rises in Calgary? 
       (e.g. before Christmas, after New Year’s where debt is high, summer where the weather is good, recessions)</li>
-    <li>Imagine that in 2010, you live in Medicine Hat and you want to move to Calgary or Edmonton, and you have dependants living with you. 
-      As of 2010, looking at total rate of all crimes against children, which location has the lowest
-     total crime rate out of the three (Calgary, Edmonton, Medicine Hat)? 
+    <li>How do the crime rates involving drugs such as cocaine and cannabis differ 
+        across Calgary, Edmonton and Medicine Hat over the years?
 
        </li>        
     </ol>
@@ -139,7 +138,7 @@
         <h3 >Project 1.1 Recap and Changes</h3>
     </div>
     <p>The only questions that changed from Project 1.1 were questions [4] and [6], which were originally:</p>
-       <ol>
+       <ol class="custom-list-o">
          <li>[4] What are the top 2 crimes that are strongly correlated with one another? 
            Which crimes can predict a violent crime such as first-degree murder?</li>
          <li>[6] Is Calgary becoming a more dangerous city? Based on the answers to the 
@@ -178,12 +177,12 @@
     </p>
 
     <div class="col-sm-12 col-md-12 col-lg-12">
-        
+            <small>Yearly Average Crime Count by Time Period Built - The labels are visible on the maximum and minimum values
+                    by time period. The size of the data point is attributed to how large the yearly average crime count is for that 
+                    specific community.
+                  </small>
           <div class="hover-bg"> <a href="img/datavis/bySectorCommStruc.png" rel="prettyPhoto">   
-              <small>Yearly Average Crime Count by Time Period Built - The labels are visible on the maximum and minimum values
-                by time period. The size of the data point is attributed to how large the yearly average crime count is for that 
-                specific community.
-              </small>
+              
               <div class="clearfix"></div>
             <img src="img/datavis/bySectorCommStruc.png" class="img-responsive" > </a> </div>
       
@@ -195,30 +194,33 @@
         onwards, but communities in the 1950s actually have a lower average crime count than the 1960s/1970s. Looking at the averages,
       I wondered if the different number of communities was affecting the averages.  </p>
         <p>Breaking it off and looking at it by sector, and by time period:</p>
-
+        <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6">
-        
-            <div class="hover-bg"> <a href="img/datavis/mapSector.png" rel="prettyPhoto">
+                <div class= "portfolio-item">
+            <div class="Q1A"> <a href="img/datavis/mapSector.png" rel="prettyPhoto">
+                
                 <small>Yearly Average Crime Count by Sector
                 </small>
                 <div class="clearfix"></div>
              
               <img src="img/datavis/mapSector.png" class="img-responsive" > </a> </div>
-        
+                </div>
         </div>
 
         <div class="col-sm-6 col-md-6 col-lg-6">
-        
-            <div class="hover-bg"> <a href="img/datavis/byTimePeriodCommunity.png" rel="prettyPhoto">
+                <div class= "portfolio-item">
+            <div class="Q1A"> <a href="img/datavis/byTimePeriodCommunity.png" rel="prettyPhoto">
               
                 <small>Yearly Average Crime Count by Sector
                 </small>
                 <div class="clearfix"></div>
              
               <img src="img/datavis/byTimePeriodCommunity.png" class="img-responsive" > </a> </div>
-        
+                </div>
         </div>
-        
+    </div>
+        <br>
+        <br>
             <p>It seems like by sector, the northeast has the highest average yearly crime rate, with the south being a 
               close second. When we split the data up by time period communities were built, and have the average yearly crime
               for each sector on a separate y-axis, it seems like in the 1960s/1970s there were 45 communities built, while
@@ -298,7 +300,6 @@
         <h4>Analysis Process and Interpretation</h4>
     </div>
     <div class="col-sm-6 col-md-12 col-lg-12">
-        
         <div class="hover-bg"> <a href="img/datavis/Q2MostCrimes.png" rel="prettyPhoto">
             <small>Yearly Average Crime Count by Sector
             </small>
@@ -398,8 +399,7 @@
         
           <div class="hover-bg"> <a href="img/datavis/corr2.png" rel="prettyPhoto">
            
-              <small>Top correlation seems to be Common Bawdy House and Making and Distribution of Child Pornography.
-              </small>
+              
               <div class="clearfix"></div>
           
             <img src="img/datavis/corr2.png" class="img-responsive" > </a> </div>
@@ -420,15 +420,19 @@
         
           <div class="hover-bg"> <a href="img/datavis/corr3.png" rel="prettyPhoto">
            
-              <small>Youth to Adult Comparisons of Crime in Alberta
-              </small>
+            
               <div class="clearfix"></div>
           
             <img src="img/datavis/corr3.png" class="img-responsive" > </a> </div>
       
       </div>
       <p>It turns out the highest pair of crimes that are most likely correlated is breaking and entering, and theft 5,000 or under.
-          Looking at the minimum count for both these crimes, we get 500 counts which I think is a reasonably high amount. 
+          Looking at the minimum count for both these crimes, we get 500 counts which I think is a reasonably high amount. The correlation
+          pair for me makes sense because if you are going to steal something, it most likely is in a building of some sort that you have
+          to break and enter to. My hypothesis is, based on what we saw earlier more youth commit break and enter crimes, thus most likely don't have access to cars
+          which means that tha value of the things that they steal are most likely things that need to be carried on foot. Another 
+          assumption that I have is that a lot of individual things in a house don't actually cost more than $5,000. If they do,
+          it's likely that they can't be easily stolen.
           
         </p>
      
@@ -436,7 +440,7 @@
         
           <div class="hover-bg"> <a href="img/datavis/correlation1.png" rel="prettyPhoto">
            
-              <small>Youth to Adult Comparisons of Crime in Alberta
+              <small>Correlation
               </small>
               <div class="clearfix"></div>
           
@@ -465,8 +469,6 @@
         
           <img src="img/datavis/calgaryCrimeMonth.png" class="img-responsive" > </a> </div>
 
-          <small>Monthly Crime Counts in Calgary
-            </small>
         </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-6">
@@ -477,10 +479,11 @@
             <div class="clearfix"></div>
         
           <img src="img/datavis/calgaryTemp.png" class="img-responsive" > </a> </div>
-          <small>Average Highs and Lows of Temperature in Calgary - retrieved by a simple look up of 
+         
+      </div>
+      <small>Average Highs and Lows of Temperature in Calgary - retrieved by a simple look up of 
             "average monthly temperature calgary" using Google Search
             </small>
-      </div>
     </div>
 
     <div class="row">
@@ -489,8 +492,7 @@
         
             <div class="hover-bg"> <a href="img/datavis/seasonLine.png" rel="prettyPhoto">
              
-                <small>Top correlation seems to be Common Bawdy House and Making and Distribution of Child Pornography.
-                </small>
+              
                 <div class="clearfix"></div>
             
               <img src="img/datavis/seasonLine.png" class="img-responsive" > </a> </div>
@@ -508,8 +510,7 @@
         </pre>
         <div class="hover-bg"> <a href="img/datavis/calgaryCrimeMonthYear.png" rel="prettyPhoto">
              
-            <small>Crime Trend of Calgary over the months and years
-            </small>
+          
             <div class="clearfix"></div>
         
           <img src="img/datavis/calgaryCrimeMonthYear.png" class="img-responsive" > </a> </div>
@@ -519,7 +520,7 @@
     </div>
     </div>
 
-    <p>It looks like over the years crime has had a cyclical pattern, with summer having the most crime each year and winter
+    <p>It looks like over the years crime in Calgary has had a cyclical pattern, with summer having the most crime each year and winter
         having the least crime. Personally this makes sense because Calgary winters are very cold and you would not want to stay
         out for a long period of time.
     </p>
@@ -533,6 +534,31 @@
     <div class="center">
         <h4 >Analysis Process</h4>
     </div>
+    <div class="col-sm-6 col-md-12 col-lg-12">
+            <div class="hover-bg"> <a href="img/datavis/Q6A.png" rel="prettyPhoto">
+              
+                <div class="clearfix"></div>
+             
+              <img src="img/datavis/Q6A.png" class="img-responsive" > </a> </div>
+        
+        </div>
+        <p>What I did for this analysis question was filter the values "Total cannabis, trafficking, production, or distribution"
+            and  "Total cocaine, trafficking, production, or distribution", and further filtered the locations to be 
+            Calgary, Edmonton and Medicine Hat. Using the rater per 100 000 population column, I plotted the values by year from 1998
+            to 2016, each row denoting a location (Calgary, Edmonton, Medicine Hat). 
+            </p>
+        <div class="col-sm-6 col-md-12 col-lg-12">
+                <div class="hover-bg"> <a href="img/datavis/Q6B.png" rel="prettyPhoto">
+                  
+                    <div class="clearfix"></div>
+                 
+                  <img src="img/datavis/Q6B.png" class="img-responsive" > </a> </div>
+            
+        </div>
+        <p>I wanted to see a direct comparison between the municipalities for each year, so I had the column list as the year and location,
+            and the rows to be the specific type of violation and the rate of that particular crime per 100 000 population. Based on the 
+            visualizations above, I wondered why Medicine Hat's average was so high. 
+                </p>
   
 </div>
 
