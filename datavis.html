@@ -319,6 +319,11 @@
     <div class="center">
         <h4>Analysis Process and Interpretation</h4>
     </div>
+    <p>For this question I chose to filter in Calgary, Edmonton, Medicine Hat and Chestermere and filtered out Alberta. I did this by filtering just the top 5 results by the sum of violations and plotted them by location and averages on the column
+        set, and violation on the row set. I filtered any value that has the term "Total" or "Other" because they are aggregations of other 
+        counts. I checked that the top 5 violations were the same for all the locations, then had the Violations values on the row set.
+
+    </p>
     <div class="col-sm-6 col-md-12 col-lg-12">
         <div class="hover-bg"> <a href="img/datavis/Q2MostCrimes.png" rel="prettyPhoto">
             <small>Yearly Average Crime Count by Sector
@@ -328,6 +333,12 @@
           <img src="img/datavis/Q2MostCrimes.png" class="img-responsive" > </a> </div>
     
     </div>
+    <p>We see that for the Calgary and Edmonton, the highest crime rates comes from Theft under $5,000 from a motor vehicle, while for smaller
+        cities like Medicine Hat and Chestermere, the highest crime rates come from Mischief. I honestly don't know why the crime rate
+        mischief is higher in places with smaller populations, but my hypothesis is that there is more organized crime in big cities. Organized crimes
+        maybe steal components such as audio players or GPS systems, car parts from the cars themselves and sell them in the black market. On average,
+        across all crimes, Edmonton has consistently been above average in terms of crime rate.   
+        </p>
     <div class="col-sm-6 col-md-12 col-lg-12">
         
         <div class="hover-bg"> <a href="img/datavis/Q2b.png" rel="prettyPhoto">
@@ -467,9 +478,141 @@
             it's likely that they can't be easily stolen.
             
           </p>
-       
-   
-</div>
+          <p>This is the code used for multiple regression:</p>
+          <pre>import statsmodels.formula.api as smf
+                lm_crime = smf.ols(formula='Murder_first_degree ~  '\
+                '+Infanticide'  \
+                '+Commit_offence_for_criminal_organization'  \
+                '+Advertising_sexual_services'  \
+                '+Methamphetamines_crystal_meth_importation_and_exportation'  \
+                '+Cannabis_importation_and_exportation'  \
+                '+Heroin_importation_and_exportation'  \
+                '+Methylenedioxyamphetamine_ecstasy_possession'  \
+                '+Competition_Act'  \
+                '+Hoax_terrorism'  \
+                '+Abduction_under_the_age_14_not_parent_or_guardian'  \
+                '+Advocating_genocide'  \
+                '+Cocaine_importation_and_exportation'  \
+                '+Dangerous_operation_evading_police_causing_death'  \
+                '+Instruct_offence_for_criminal_organization'  \
+                '+Explosives_causing_death_or_bodily_harm'  \
+                '+Break_and_enter_to_steal_a_firearm_from_a_motor_vehicle'  \
+                '+Criminal_negligence_causing_death'  \
+                '+Methylenedioxyamphetamine_ecstasy_trafficking'  \
+                '+Commission_or_instructing_to_carry_out_terrorist_activity'  \
+                '+Altering_removing_or_destroying_Vehicle_Identification_Number_VIN'  \
+                '+Dangerous_operation_causing_death_while_street_racing'  \
+                '+Conspire_to_commit_murder'  \
+                '+Firearm_transfers_or_serial_numbers'  \
+                '+Cocaine_production'  \
+                '+Abduction_under_the_age_14_contravening_a_custody_order'  \
+                '+Dangerous_operation_causing_death'  \
+                '+Heroin_trafficking'  \
+                '+Communicating_to_provide_sexual_services_for_consideration'  \
+                '+Facilitate_terrorist_activity'  \
+                '+Leaving_Canada_to_commit_offence_that_is_terrorist_activity'  \
+                '+Manslaughter'  \
+                '+Impaired_operation_drugs_causing_death'  \
+                '+Breaking_and_entering_to_steal_a_firearm'  \
+                '+Invitation_to_sexual_touching'  \
+                '+Cannabis_production'  \
+                '+Bankruptcy_Act'  \
+                '+Methamphetamines_crystal_meth_trafficking'  \
+                '+Kidnapping'  \
+                '+Luring_a_child_via_a_computer'  \
+                '+Arson_disregard_for_human_life'  \
+                '+Indecent_acts'  \
+                '+Assault_level_3_aggravated'  \
+                '+Attempted_murder'  \
+                '+Arson+Extortion'  \
+                '+Homicide'  \
+                  , data=d).fit()
+                
+                # print the coefficients
+                print(lm_crime.params)
+                lm_crime.summary()
+            </pre>
+            <p>And this is the output:</p>
+            <pre>Intercept                                                            0.180462
+                    Infanticide                                                         -0.232313
+                    Commit_offence_for_criminal_organization                             0.209033
+                    Advertising_sexual_services                                          0.164596
+                    Methamphetamines_crystal_meth_importation_and_exportation            0.612533
+                    Cannabis_importation_and_exportation                                -0.110311
+                    Heroin_importation_and_exportation                                  -0.000869
+                    Methylenedioxyamphetamine_ecstasy_possession                        -0.249338
+                    Competition_Act                                                     -0.030225
+                    Hoax_terrorism                                                       0.310415
+                    Abduction_under_the_age_14_not_parent_or_guardian                   -0.059490
+                    Advocating_genocide                                                  0.463646
+                    Cocaine_importation_and_exportation                                 -0.094991
+                    Dangerous_operation_evading_police_causing_death                     0.157164
+                    Instruct_offence_for_criminal_organization                           0.500772
+                    Criminal_negligence_causing_death                                    0.003857
+                    Methylenedioxyamphetamine_ecstasy_trafficking                        0.027840
+                    Commission_or_instructing_to_carry_out_terrorist_activity           -0.077850
+                    Altering_removing_or_destroying_Vehicle_Identification_Number_VIN    0.060641
+                    Dangerous_operation_causing_death_while_street_racing                0.173869
+                    Conspire_to_commit_murder                                           -0.213716
+                    Firearm_transfers_or_serial_numbers                                 -0.121448
+                    Cocaine_production                                                   0.157958
+                    Abduction_under_the_age_14_contravening_a_custody_order              0.000255
+                    Dangerous_operation_causing_death                                    0.060452
+                    Heroin_trafficking                                                  -0.093765
+                    Communicating_to_provide_sexual_services_for_consideration          -0.076533
+                    Facilitate_terrorist_activity                                       -0.117903
+                    Leaving_Canada_to_commit_offence_that_is_terrorist_activity          0.908075
+                    Manslaughter                                                        -0.049829
+                    Impaired_operation_drugs_causing_death                               0.315761
+                    Breaking_and_entering_to_steal_a_firearm                            -0.026077
+                    Invitation_to_sexual_touching                                        0.103762
+                    Cannabis_production                                                 -0.025856
+                    Bankruptcy_Act                                                       0.256307
+                    Methamphetamines_crystal_meth_trafficking                           -0.019289
+                    Kidnapping                                                           0.107383
+                    Luring_a_child_via_a_computer                                        0.337560
+                    Arson_disregard_for_human_life                                       0.205432
+                    Indecent_acts                                                       -0.051292
+                    Assault_level_3_aggravated                                          -0.081662
+                    Attempted_murder                                                     0.128292
+                    Arson                                                                0.013254
+                    Extortion                                                            0.073964
+                    Homicide                                                             0.730581
+                    dtype: float64</pre>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+        
+                    <div class="hover-bg"> <a href="img/datavis/stats.png" rel="prettyPhoto">
+                     
+                        <small>Summary Statistics for Multiple Regression
+                        </small>
+                        <div class="clearfix"></div>
+                    
+                      <img src="img/datavis/stats.png" class="img-responsive" > </a> </div>
+                
+                </div>
+            <p>The best r-squared value that I could come up with for this is 0.709. I first dumped all 
+                the crime columnms in the model and checked to see which p-values were more than 0.05. 
+                There are still some values here that have a value of less than 0.05, but I kept them because 
+                removing them dropped the r-squared significantly. The strongest coefficient related 
+                to first degree murder is homicide as shown below.
+            </p>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+        
+                    <div class="hover-bg"> <a href="img/datavis/homicide.png" rel="prettyPhoto">
+                     
+                        <small>Summary Statistics for Multiple Regression
+                        </small>
+                        <div class="clearfix"></div>
+                    
+                      <img src="img/datavis/homicide.png" class="img-responsive" > </a> </div>
+                
+                </div>
+            <p>All the values that are above 0.05 have significant p-values, whereas all the values below that do not. 
+                Thus for all the crimes with significant p-values we might reject the null hypothesis (that there is no association between those features and 
+                first degree murder), and fail to reject the null hypothesis for all values below 0.05.
+                   Values such as Homicide, Crytal Meth importation and exportation, and all values that are positive are all positively associated with first degree
+                   murder, whereas Infanticide is negatively associated with First Degree Murder. 
+               </div>
 <div id="q5">
     <div class="center">
         <h3 >Question 5</h3>
@@ -594,7 +737,8 @@
         <p>I wanted to see a direct comparison between the municipalities for each year, so I had the column list as the year and location,
             and the rows to be the specific type of violation and the rate of that particular crime per 100 000 population. Based on the 
             visualizations above, I wondered why Medicine Hat's average was so high. After some digging it turns out that the population of
-            Medicine Hat is less than 100 000 people.
+            Medicine Hat is less than 100 000 people. I'm not entirely sure how Stats Canada did the normalization of rates but my suspicion is that 
+            this might skew the results up for Medicine Hat.
         </p>
   
 </div>
