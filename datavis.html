@@ -145,11 +145,11 @@
          questions above, and based on the crime statistics alone, would you decide to live in Calgary and if so where? </li></ol>
     <p>I changed question [4] because it needed more detail about the level 
       of analysis. It was unclear whether the correlations were for the city level, 
-      neighborhood level, or if it was by year or month. I since have made it clearer by specifying that it was by municipality level
-    with </p>
+      neighborhood level, or if it was by year or month. I since have made it clearer by specifying that it was by municipality level. </p>
      <p>I changed question [6] because using the term "you" is very subjective. 
        The question doesn't have a clear sense of who we're talking about and what their tolerances are, 
-       it isn't clear how a question like this can be answered.</p>
+       it isn't clear how a question like this can be answered. I decided to go with crime that involves drugs between Calgary, 
+    Edmonton, and Medicine Hat because I'm interested to see if drug crimes vary between these cities. </p>
     </div>    
 </div>
 
@@ -310,7 +310,14 @@
         </small>
   </div>
 </div>
+<p> Just because there are more crimes in some sectors does not necessarily mean they're bad places. This data is not normalized by 
+    community, and each community varies in population. This information may be helpful to determine how to allocate police forces depending
+    on sectors. To summarize all the charts above, it seems that older communities may be attributed to more crime, and specific sectors 
+    such as the Northeast or South may contribute to crime as well. In the first chart, it looks like the top communities for crime per 
+    time period built come from the northeast or east sector.
+    </p>
 </div>
+
 <div id="q2">
     <div class="center">
         <h3>Question 2</h3>
@@ -319,9 +326,11 @@
     <div class="center">
         <h4>Analysis Process and Interpretation</h4>
     </div>
-    <p>For this question I chose to filter in Calgary, Edmonton, Medicine Hat and Chestermere and filtered out Alberta. I did this by filtering just the top 5 results by the sum of violations and plotted them by location and averages on the column
+    <p>For this question I chose to filter in Calgary, Edmonton, Medicine Hat and Chestermere and filtered out Alberta, since we are interested
+        in cities in Alberta, not Alberta itself. I did this by filtering just the top 5 results by the sum of violations and plotted them by location and averages on the column
         set, and violation on the row set. I filtered any value that has the term "Total" or "Other" because they are aggregations of other 
-        counts. I checked that the top 5 violations were the same for all the locations, then had the Violations values on the row set.
+        counts. I checked that the top 5 violations were the same for all the locations, then had the Violations values on the row set. The values
+        were calculated by taking the average of the violations (aggregating the sum value of the violation divided by the distinct number of years).
 
     </p>
     <div class="col-sm-6 col-md-12 col-lg-12">
@@ -336,8 +345,7 @@
     <p>We see that for the Calgary and Edmonton, the highest crime rates comes from Theft under $5,000 from a motor vehicle, while for smaller
         cities like Medicine Hat and Chestermere, the highest crime rates come from Mischief. I honestly don't know why the crime rate
         mischief is higher in places with smaller populations, but my hypothesis is that there is more organized crime in big cities. Organized crimes
-        maybe steal components such as audio players or GPS systems, car parts from the cars themselves and sell them in the black market. On average,
-        across all crimes, Edmonton has consistently been above average in terms of crime rate.   
+        maybe steal components such as audio players or GPS systems, car parts from the cars themselves and sell them in the black market.
         </p>
     <div class="col-sm-6 col-md-12 col-lg-12">
         
@@ -349,6 +357,9 @@
           <img src="img/datavis/Q2b.png" class="img-responsive" > </a> </div>
     
     </div>
+    <p> It looks like on average,across all crimes, Edmonton has consistently been above average in terms of crime rate. Calgary actually 
+        has a bigger population than Edmonton, and these rates have been normalized, so I'm not too sure why Edmonton's crime rate 
+    is consistently higher. Integration of more data sets will prove useful to see why this is the case.   </p>
     
 </div>
 <div id="q3">
@@ -364,7 +375,9 @@
     <p>This can be done by using the augmented “By Crime” data set, with the values "Rate Youth charged per 
       100 000 population" subtracted with "Rate Adult charged per 100 000 population", and setting this 
       as a new calculation field. I filtered in all values with Alberta as the location, and filtered out 
-      youth specific crimes like Youth Criminal Justice Act. I computed the yearly average difference in rate
+      youth specific crimes like Youth Criminal Justice Act, since this crime was specific to youth (every time a young
+      person from the ages 12 to 17 commits a crime they are in violation of this). I computed the yearly average difference in rate
+      simply by subtracting the youth rate to the adult rate (youth rate - adult rate)
       and placed them in the bar chart. Positive values will denote a blue hue while negative values will have a 
       red hue. Youth in this case will be all persons under 18.
       </p>
@@ -402,7 +415,7 @@
     <div class="center">
         <h4 >Analysis Process and Interpretation</h4>
     </div>
-    <p>For this question, I used the "By STA" data set and the tool Jupyter Anaconda to calculate the correlations between all
+    <p>For this question, I used one of my augmented data sets with the individual crimes pivoted as columns and the tool Jupyter Anaconda to calculate the correlations between all
       the possible crimes. Here are the commands I used:</p>
       <pre>
       <font color="green"># imports</font>
@@ -710,9 +723,16 @@
     <div class="center">
         <h3 >Question 6</h3>
     </div>
+    <p>How do the crime rates involving drugs such as cocaine and cannabis differ 
+        across Calgary, Edmonton and Medicine Hat over the years?</p>
     <div class="center">
         <h4 >Analysis Process</h4>
     </div>
+    <p>What I did for this analysis question was filter the values "Total cannabis, trafficking, production, or distribution"
+            and  "Total cocaine, trafficking, production, or distribution", and further filtered the locations to be 
+            Calgary, Edmonton and Medicine Hat. Using the rater per 100 000 population column, I plotted the values by year from 1998
+            to 2016, each row denoting a location (Calgary, Edmonton, Medicine Hat). 
+            </p>
     <div class="col-sm-6 col-md-12 col-lg-12">
             <div class="hover-bg"> <a href="img/datavis/Q6A.png" rel="prettyPhoto">
               
@@ -721,12 +741,14 @@
               <img src="img/datavis/Q6A.png" class="img-responsive" > </a> </div>
         
         </div>
-        <p>What I did for this analysis question was filter the values "Total cannabis, trafficking, production, or distribution"
-            and  "Total cocaine, trafficking, production, or distribution", and further filtered the locations to be 
-            Calgary, Edmonton and Medicine Hat. Using the rater per 100 000 population column, I plotted the values by year from 1998
-            to 2016, each row denoting a location (Calgary, Edmonton, Medicine Hat). 
-            </p>
-        <div class="col-sm-6 col-md-12 col-lg-12">
+        <p> There is a noticeable spike for Calgary in 2009, and 2012 in Edmonton for total
+                counts of violations pertaining to cocaine, and I think these years when the police do drug busts, they catch multiple people at 
+                a time associated with the drug ring. There's also noticeable spikes for cannabis in 2002 and 2011 for Medicine Hat.</p>
+        
+        <p>For the graph below I changed things up a bit so I can see a direct comparison
+            between the municipalities for each year, so I had the column list as the year and location,
+                and the rows to be the specific type of violation and the rate of that particular crime per 100 000 population. </p>
+                <div class="col-sm-6 col-md-12 col-lg-12">
                 <div class="hover-bg"> <a href="img/datavis/Q6B.png" rel="prettyPhoto">
                   
                     <div class="clearfix"></div>
@@ -734,11 +756,18 @@
                   <img src="img/datavis/Q6B.png" class="img-responsive" > </a> </div>
             
         </div>
-        <p>I wanted to see a direct comparison between the municipalities for each year, so I had the column list as the year and location,
-            and the rows to be the specific type of violation and the rate of that particular crime per 100 000 population. Based on the 
+        <p>I wanted to see a direct comparison Based on the 
             visualizations above, I wondered why Medicine Hat's average was so high. After some digging it turns out that the population of
             Medicine Hat is less than 100 000 people. I'm not entirely sure how Stats Canada did the normalization of rates but my suspicion is that 
-            this might skew the results up for Medicine Hat.
+            this might skew the results up for Medicine Hat. In summary it looks like comparing all three cities, for cannabis from 1998 to 2006
+            it was mostly Calgary that had the most crimes, then Medicine Hat dominated the scene from 2007 to 2013. From there the rates significantly
+            dropped between 2014 to 2016. For cocaine, Edmonton has a lot more crimes from 1998 to 2000, then from 2003 to 2016 Medicine Hat
+            mostly more crimes compared to the other two cities. I noticed that there is a drop in these crimes in recent years, across all three
+            cities, from 2014 onwards.      
+            Maybe this is because organizations involving crime are becoming a lot smarter and more discreet in 
+            how they traffic, produce or distribute these drugs? Or maybe there is more stigma against doing drugs, and governments are more proactive
+            in advocating against drugs during this time? I also noticed that there is a dip in cannabis crimes between 2005 to 2008, interesting but I have
+            no hypothesis as to why. Perhaps it was simply just a more peaceful time during that period.
         </p>
   
 </div>
