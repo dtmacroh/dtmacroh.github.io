@@ -123,7 +123,7 @@
         </p>
 </div>
 
-<div id="q1">
+<div id="stateOfTheArt">
     <div class="center">
         <h3 >State of the Art</h3>
     </div>
@@ -142,32 +142,51 @@
         <li><li><a href="http://rtc.nagoya.riken.jp/RI-MAN/index_us.html" target="_blank">Ri-Man</a></li>A personal assistant robot meant to lift and carry people that face mobility issues in their home. Meant to lower client’s dependence on other people.</li>
 
     </ul>
-       <p> These robots all fulfill particular purposes that may be very useful to elderly living in their homes. In particular, we found medication and mobility assistance particularly interesting mxethods through which to create meaningful interaction, and robots that can help with daily tasks and in improving an elderly person’s social interaction. 
+       <p> These robots all fulfill particular purposes that may be very useful to elderly living in their homes. In particular, we found medication and mobility assistance particularly interesting methods through which to create meaningful interaction, and robots that can help with daily tasks and in improving an elderly person’s social interaction. 
         </p>
     </p>
 </div>
-
-<div>
-<h3>Acknowledgements and Sources</h3>
-<p>This is a group project made in University of Calgary's Human Robotic Interactions class of Winter 2018. Team members include Brendan Dueck, Hadiya Firdaus, Edrienne Manalastas and myself. 
-</p>
-<ol class="custom-list-o">
-    <li><a href="https://www.cbsnews.com/news/rp-vita-robot-on-wheels-lets-docs-treat-patients-remotely/" target="_blank">RP-VITA robot</a></li>
-    <li><a href="http://www.cs.cmu.edu/~nurse-bot/web/papers/umich/aaai02wkshp.pdf" target="_blank">Pearl</a></li>
-    <li><a href="https://www.care-o-bot.de/en/care-o-bot-4.html" target="_blank">Care-o-bot 4</a></li>
-        <li><a href="https://static.generation-robots.com/6645-thickbox_default/robot-mobile-pioneer-3-at.jpg" 
-            target="_blank">Pioneer 3DX image</a></li>
-        <li><a href="https://doi.org/10.1093/ageing/afl084" 
-        target="_blank">Falls in older people paper</a></li>
-        <li><a href="http://www.cybedroid.com/" target="_blank">CybeDroid</a></li>
-        <li><a href="http://rtc.nagoya.riken.jp/RI-MAN/index_us.html" target="_blank">Ri-Man</a></li>
-    
-    </ol>
-        
-       <li></li>
+<div id="initsolut">
+    <div class="center">
+        <h3 >Our Initial Solution</h3>
+    </div>
+   
+<p>One of the main objectives of our robot is to assist elderly people when they experience a fall. This will involve providing a level of effective support and a means to escalate the matter further by contacting an emergency contact that has been previously set up by the user. 
+        Our ultimate goal is not to simply create a single purpose robot but an entity that that allows elderly people to live on their own and feel safe in case of emergencies. An important note is that while aiming to achieve this, we want to explore on the depth of each deceptively simple human-robot interaction to give the user the best possible experience with our robot -- so they feel safe and independent. 
+        With Bettybot, our goal is to help make seniors’ lives better without forcing them to become dependant on a senior home or a personal aid worker. We aim to create a robotic entity that can fulfill specific needs of the elderly, and also one that elderly people can feel comfortable around.  
+        Some nice to have (optional) features that the team is hoping to implement includes: </p>
+        <ol class="custom-list-o">
+         <li>Pill carrying and medication reminder throughout the day (Breakfast, Lunch, Dinner). Reminders require acknowledgment from user, else another reminder will happen in another fifteen minutes. </li>
+         <li>Ability to set alarms/reminders </li>
+         <li>Ability to call others </li>
+         <li>Ability to show entertainment on the laptop (pictures, news, music, etc) </li>
+         <li>Ability to control smart home devices </li>
+        </ol>
+         
 </div>
+<div id="strategy">
+        <div class="center">
+            <h3 >Strategy</h3>
+        </div>
+       
+    <p>The ARIA SDK is integrated with the Pioneer robot, and runs the robot navigation functionality which is controlled by one of us. A python script then runs that responds to the Google Home, which is set atop the Pioneer, and deals with the voice interaction. A phone accelerometer has been hooked up with IFTTT (If This Then That) in order to notify a Dropbox server that a fall has occurred, which activates that python script. Physical movements that are programmed need to override the user-controlled movements.</p>
+    </div>
 
+<div id="vid" class="video">
+        <div class="center">
+            <h3 >Video</h3>
+        </div>
+        
+        <iframe src="https://www.youtube.com/embed/kKcYmujrF5Q" gesture="media" allow="encrypted-media"  frameborder="0"></iframe>
 
+    </div>
+<div id="code-section">
+        <div class="center">
+            <h3 >Code</h3>
+        </div>
+        <strong>Prerequisites:</strong><br/>
+        Have a Windows OS, Pioneer 3DX robot and 
+    </div>
 </div>
 </div>
 </div>
