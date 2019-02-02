@@ -286,9 +286,9 @@ Main Components
 .cd-horizontal-timeline .events-content h2 {
   font-weight: bold;
   font-size: 2.6rem;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.2	;
 }
 .cd-horizontal-timeline .events-content em {
   display: block;
