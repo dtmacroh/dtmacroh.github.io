@@ -204,7 +204,7 @@ header p {
 /* Services Section */
 #services-section {
 	padding: 120px 0;
-	background-color: #fff;
+	background-color:#f6f6f6;
 }
 #services-section h4 {
 	font-weight: 700;
@@ -379,56 +379,7 @@ ol.typesocial li {
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
-/* Team Section */
-#team-section {
-	padding: 100px 0;
-}
-.section-title.center {
-	padding: 30px 0;
-}
-.section-title h2 {
-	margin-bottom: 30px;
-}
-.section-title h3 {
-	margin-bottom: 30px;
-}
-img.img-circle.team-img {
-	width: 150px;
-	height: 150px;
-	border: 4px solid transparent;
-	transition: all 0.5s;
-}
-#team-section .team .thumbnail:hover>img.img-circle.team-img {
-	border: 4px solid #fff;
-	font-size: medium;
-}
-#team-section .thumbnail {
-	background: transparent;
-	border: 0;
-}
-#team-section .thumbnail .caption {
-	padding: 9px;
-}
-/* Achivements Section */
-#achievements {
-	padding: 80px 0;
-	background-color: #0dbf9b;
-}
-.achievement-box {
-	text-align: center;
-	margin: 20px 0;
-}
-.achievement-box h4 {
-	font-size: 16px;
-	color: rgba(255,255,255,0.8);
-	text-transform: uppercase;
-}
-.achievement-box span.count {
-	color: #fff;
-	font-size: 50px;
-	font-weight: 500;
-	display: block;
-}
+
 /* Contact Section */
 #contact-section {
 	padding: 120px 0 60px 0;
