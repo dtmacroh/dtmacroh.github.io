@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 60;
+		eventsMinDistance = 70;
 
 	(timelines.length > 0) && initTimeline(timelines);
 
@@ -18,6 +18,8 @@ jQuery(document).ready(function($){
 			timelineComponents['timelineNavigation'] = timeline.find('.cd-timeline-navigation');
 			timelineComponents['eventsContent'] = timeline.children('.events-content');
 
+
+
 			//assign a left postion to the single events along the timeline
 			setDatePosition(timelineComponents, eventsMinDistance);
 			//assign a width to the timeline
@@ -25,6 +27,17 @@ jQuery(document).ready(function($){
 			//the timeline has been initialize - show it
 			timeline.addClass('loaded');
 
+
+			currentTimeNode = $('.cd-horizontal-timeline > .timeline').find('[data-date="05/05/2016"]')
+			console.log(currentTimeNode);
+			
+			event.preventDefault();
+			timelineComponents['timelineEvents'].removeClass('selected');
+			currentTimeNode.addClass('selected');
+			updateOlderEvents(currentTimeNode);
+			updateFilling(currentTimeNode, timelineComponents['fillingLine'], timelineTotWidth);
+			updateVisibleContent(currentTimeNode, timelineComponents['eventsContent']);
+			
 			//detect click on the next arrow
 			timelineComponents['timelineNavigation'].on('click', '.next', function(event){
 				event.preventDefault();
@@ -43,6 +56,7 @@ jQuery(document).ready(function($){
 				updateOlderEvents($(this));
 				updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
 				updateVisibleContent($(this), timelineComponents['eventsContent']);
+				
 			});
 
 			//on swipe, show next/prev event content
