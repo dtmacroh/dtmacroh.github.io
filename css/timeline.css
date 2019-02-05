@@ -17,7 +17,7 @@ Main Components
 -------------------------------- */
 .cd-horizontal-timeline {
   opacity: 0;
-  margin: 1em auto;
+  margin: 2em auto;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -151,7 +151,7 @@ Main Components
 }
 @media only screen and (min-width: 1100px) {
   .cd-horizontal-timeline {
-    margin: 3em auto;
+    margin: 6em auto;
   }
   .cd-horizontal-timeline::before {
     /* never visible - this is used in jQuery to check the current MQ */
@@ -185,11 +185,8 @@ Main Components
 }
 .cd-timeline-navigation a::after {
   /* arrow icon */
-  /* content: ""; */
+  content: '';
   position: absolute;
-  /* font-family: FontAwesome; */
-  
-  content: "";  
   height: 16px;
   width: 16px;
   left: 50%;
@@ -201,7 +198,7 @@ Main Components
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url("../img/right-arrow.svg") no-repeat 0 0;
+  background: url(../img/cd-arrow.svg) no-repeat 0 0;
 }
 .cd-timeline-navigation a.prev {
   left: 0;
