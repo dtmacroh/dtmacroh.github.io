@@ -496,6 +496,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .video{
 	height:500px;
 }
+#treeskills{
+	max-height:900px;
+}
 }
 
 @media (max-width: 768px) {
@@ -508,6 +511,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .header{
 	height:100px;
 	width:700px;
+}
+#treeskills{
+	max-height:700px;
 }
 }
 
@@ -525,7 +531,7 @@ label {
 	height:70px;
 }
 #treeskills{
-	height:70px;
+	max-height:700px;
 }
 
 }
@@ -538,9 +544,8 @@ label {
 	height:50px;
 }
 #treeskills{
-	height:70px;
+	max-height:200px;
 }
-
 }
 .or-spacer-vertical {
   display:inline-block;
