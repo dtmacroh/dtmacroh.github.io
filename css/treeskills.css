@@ -1,0 +1,70 @@
+/* credit goes to https://codepen.io/zhulinpinyu/pen/EaZrmM for css file of the tree */
+
+div#treeskills {
+  /* width: 1200px; */
+  margin: 0 auto;
+  position: relative;
+}
+
+div#treeskills rect {
+  fill: none;
+  pointer-events: all;
+}
+
+div#treeskills pre {
+  font-size: 18px;
+}
+
+div#treeskills line {
+  stroke: #0E0;
+  stroke-width: 1.5px;
+}
+
+div#treeskills .string, div#treeskills .regexp {
+  color: #f39;
+}
+
+#treeskills .keyword {
+  color: #00c;
+}
+
+#treeskills .comment {
+  color: #777;
+  font-style: oblique;
+}
+
+div#treeskills .number {
+  color: #369;
+}
+
+div#treeskills .class, div#treeskills .special {
+  color: #1181B8;
+}
+
+div#treeskills a:link, div#treeskills a:visited {
+  color: steelblue;
+  text-decoration: none;
+}
+
+#treeskills a:hover {
+  color: #666;
+}
+
+
+
+#treeskills .node circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+#treeskills .node text {
+  font-size: 12px;
+}
+
+#treeskills path.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2.0px;
+}
