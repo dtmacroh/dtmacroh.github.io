@@ -24,12 +24,14 @@ var json_data = {
      {
       "name": "SQL Server Management Studio",
       "value": 15,
-      "description": "For dealing with databases"
+      "description": "For dealing with databases",
+      "free": true
      },
      {
         "name": "Unity",
         "value": 4,
-        "description": "Used in my multiple projects"
+        "description": "Used in my multiple projects",
+        "free": true
        }
     ]
    },{
