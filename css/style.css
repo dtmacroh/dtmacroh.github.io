@@ -497,7 +497,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	height:500px;
 }
 #treeskills{
-	max-height:900px;
+	max-height:700px;
 }
 }
 
@@ -531,7 +531,7 @@ label {
 	height:70px;
 }
 #treeskills{
-	max-height:700px;
+	max-height:600px;
 }
 
 }
