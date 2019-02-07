@@ -91,15 +91,13 @@
       <div class="clearfix"></div>
       <p>Some of the projects I've done</p>
     </div>
-    <div class="categories">
+    <div class="categories" id="categories">
       <ul class="cat">
         <li>
           <ol class="type">
-            <li style="margin-bottom:15px"><a href="#" data-filter="*" class="active">All</a></li>
-            <li style="margin-bottom:20px" ><a href="#" data-filter=".hci">HCI</a></li>
-           
-            <li style="margin-bottom:15px" ><a href="#" data-filter=".datavis">Data Visualization</a></li>
-            <li style="margin-bottom:15px" ><a href="#" data-filter=".robotics">Robotics</a></li>
+            <li style="margin-bottom:15px" v-for="cat in categories">
+              <a href="#" v-bind:data-filter="cat.filter" v-bind:class="{ active: cat.isActive }">{{cat.text}}</a>
+            </li>
 
           </ol>
         </li>
@@ -501,6 +499,22 @@ Ensuring production environment stability and mitigating risks by assessing code
 <script type="text/javascript" src="js/timeline.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="js/treeskills.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
 
+var categories = new Vue({
+    el:'#categories',
+    data:{
+      categories: [
+        {text: 'All', filter:'*', isActive:true},
+        {text: 'HCI', filter:'.hci'},
+        {text: 'Data Visualization', filter:'.datavis'},
+        {text: 'Robotics', filter:'.robotics'}
+      ]
+    }
+  })
+  
+  
+  </script>
 </body>
 </html>
