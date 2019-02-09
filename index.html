@@ -106,163 +106,9 @@
     </div>
     <div class="row">
       <div class="portfolio-items">
-          
-
-        <div class="col-sm-12 col-md-4 col-lg-4 hci">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="project-0.html" >
-              <div class="hover-text">
-                <h4>The Irene</h4>
-                <small>CPSC 581 - Project 0</small>
-               
-                <div class="clearfix"></div>
-              </div>
-              
-              <img src="img/portfolio/hakase.png" class="img-responsive container img-rounded" alt="Project Title"> </a> 
-			 
-        </div>
-        
-			  <div style="display:block;font-size:90%;text-align:center">
-          <p>The Button</p>
-          
-          <div class="text-center center">  <span class="badge badge-pill label-primary">C#</span>
-            <span class="badge badge-pill badge-primary">WPF</span>
-          </div>
-
-        </div>
-        </div>
-       
-                
-        </div>
-
-
-
-        <div class="col-sm-12 col-md-4 col-lg-4 hci">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="project-1.html" >
-              <div class="hover-text">
-                <h4>Girl Scout Sash</h4>
-                <small>CPSC 581- Project 1</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/project1.jpeg" class="img-responsive container" alt="Project Title"> </a> 
-			  
-          </div>
-          <div style="display:block;font-size:90%;text-align:center">
-              <p>Girl Scout Sash</p>
-              
-              <div class="text-center center"><span class="badge badge-pill badge-primary">C#</span>
-                <span class="badge badge-pill badge-primary">Arduino</span>
-                <span class="badge badge-pill badge-primary">RFID</span>
-                
-                <span class="badge badge-pill badge-primary">Tangibles</span>
-
-              </div>
-    
-            </div>
-    </div>
-		</div>
-		<div class="col-sm-12 col-md-4 col-lg-4 hci">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="project-2.html" >
-              <div class="hover-text">
-                <h4>Rooting For You</h4>
-                <small>CPSC 581 - Project 2</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/project2.png" class="img-responsive container" alt="Project Title"> </a> 
-			 
-          </div>
-          <div style="display:block;font-size:90%;text-align:center">
-              <p>Rooting For You</p>
-              
-              <div class="text-center center"><span class="badge badge-pill badge-primary">C#</span>
-                <span class="badge badge-pill badge-primary">Unity</span>
-                <span class="badge badge-pill badge-primary">VR</span>
-      
-
-              </div>
-    
-            </div>
-    </div>
-    </div>
-        <div class="col-md-4 col-lg-4 hci section-item">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="project-3.html" >
-              <div class="hover-text">
-                <h4>Workplace Rhythm</h4>
-                <small>CPSC 581 - Project 3</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/project3.png" class="img-responsive container" alt="Project Title"> </a> 
-			  </div>
-        <div style="display:block;font-size:90%;text-align:center">
-            <p>Workplace Rhythm</p>
-            
-            <div class="text-center center"><span class="badge badge-pill badge-primary">C#</span>
-              <span class="badge badge-pill badge-primary">Kinect 2.0</span>
-              <span class="badge badge-pill badge-primary">Unity</span>
-
-            </div>
-  
-          </div>
-          </div>
-		 
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 datavis section-item">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="datavis.html" >
-              <div class="hover-text">
-                <h4>Visualizing Crime in Calgary and inter-Alberta</h4>
-                <small>CPSC 599 - Data Viz Project</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/datavis/calgaryMap.png" class="img-responsive container" alt="Project Title"> </a> 
-			 
-			  </div>
-			  <div style="display:block;font-size:90%;text-align:center">
-          <p>Crime Analysis and Data Visualization</p>
-            <div class="text-center center"><span class="badge badge-pill badge-primary">Python</span>
-              <span class="badge badge-pill badge-primary">Tableau</span>
-
-
-            </div>
-
-
-
-        </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-4 robotics section-item">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="bettybot.html" >
-              <div class="hover-text">
-                <h4>Bettybot</h4>
-                <small>CPSC 584 Project</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/bettybotmain.png" class="img-responsive container" alt="Project Title"> </a> 
-			  </div>
-			   <div style="display:block;font-size:90%;text-align:center">
-           <p>Bettybot</p>
-
-            <div class="text-center center"><span class="badge badge-pill badge-primary">Python</span>
-              <span class="badge badge-pill badge-primary">C++</span>
-              <span class="badge badge-pill badge-primary">Powershell</span>
-
-
-            </div>
-         </div>
-          </div>
-		
-        </div>
         <div id="proj" >
-            <project v-for="project in projects"  v-bind:props="project">hi</project>
-
+            <project v-for="project in projects"  v-bind:props="project"></project>
         </div>
-            <!-- <project id="proj" v-for="project in projects"  v-bind:props="project">
-        
-              </project> -->
 
         
       </div>
@@ -509,7 +355,7 @@ Ensuring production environment stability and mitigating risks by assessing code
 <script type="text/javascript" src="js/timeline.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="js/treeskills.js" charset="utf-8"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/vue.js"></script>
 <script>
 
 
@@ -529,9 +375,6 @@ Vue.component('project', {
 			    </div>
 			  <div style="display:block;font-size:90%;text-align:center">
           <p>{{ props.title }}</p>
-            <div class="text-center center"><span class="badge badge-pill badge-primary">Python</span>
-              <span class="badge badge-pill badge-primary">Tableau</span>
-            </div>
         </div>
           </div>
         </div>`
@@ -540,13 +383,14 @@ Vue.component('project', {
 
 var projects = new Vue({
   el:'#proj',
-  
   data: {
     projects:[
         {title:"The Irene", subtitle:"A Button Project", pageref:"project-0.html", image:"img/portfolio/hakase.png"},
-        {title:"Girl Scout Sash", subtitle:"A Wearables Project", pageref:"project-1.html", image:"img/portfolio/project1.jpeg"},
-        {title:"Rooting For You", subtitle:"A Virtual Reality Project", pageref:"project-2.html", image:"img/portfolio/project2.png"},
-        {title:"Workplace Rhythm", subtitle:"A Button Project", pageref:"project-0.html", image:"img/portfolio/hakase.png"}
+        {title:"Girl Scout Sash", subtitle:"A Physical Interactive Sash", pageref:"project-1.html", image:"img/portfolio/project1.jpeg"},
+        {title:"Rooting For You", subtitle:"An Immersive Tree-Planting Simulation", pageref:"project-2.html", image:"img/portfolio/project2.png"},
+        {title:"Workplace Rhythm", subtitle:"An Attempt to Make a Hygge Workplace", pageref:"project-3.html", image:"img/portfolio/project3.png"},
+        {title:"Crime in Alberta", subtitle:"Visualization of Crime in Calgary and inter-Alberta", pageref:"datavis.html", image:"img/datavis/calgaryMap.png"},
+        {title:"BettyBot", subtitle:"An Elderly Care Robot", pageref:"bettybot.html", image:"img/portfolio/bettybotmain.png"}
     ]
     
   }
