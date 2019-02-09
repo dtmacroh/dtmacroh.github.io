@@ -256,9 +256,15 @@
           </div>
 		
         </div>
-        <project id="proj" v-for="project in projects" v-bind:props="project">
+        <div id="proj" >
+            <project v-for="project in projects"  v-bind:props="project">hi</project>
+
+        </div>
+            <!-- <project id="proj" v-for="project in projects"  v-bind:props="project">
         
-        </project>
+              </project> -->
+
+        
       </div>
     </div>
   </div>
@@ -509,32 +515,38 @@ Ensuring production environment stability and mitigating risks by assessing code
 
 Vue.component('project', {
   props:['props'],
-  template: '<div class="col-sm-12 col-md-4 col-lg-4 datavis section-item">\
-          <div class="portfolio-item">\
-            <div class="hover-bg"> <a v-bind:href="props.pageref" >\
-              <div class="hover-text">\
-                <h4>{{ props.title }}</h4>\
-                <small>{{ props.subtitle }}</small>\
-                <div class="clearfix"></div>\
-              </div>\
-              <img src="img/datavis/calgaryMap.png" class="img-responsive container" alt="Project Title"> </a> \
-			    </div>\
-			  <div style="display:block;font-size:90%;text-align:center">\
-          <p>Crime Analysis and Data Visualization</p>\
-            <div class="text-center center"><span class="badge badge-pill badge-primary">Python</span>\
-              <span class="badge badge-pill badge-primary">Tableau</span>\
-            </div>\
-        </div>\
-          </div>\
-        </div>'
+  template: `
+  
+  <div class="col-sm-12 col-md-4 col-lg-4 data-vis section-item" >
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a v-bind:href="props.pageref" >
+              <div class="hover-text">
+                <h4>{{ props.title }}</h4>
+                <small>{{ props.subtitle }}</small>
+                <div class="clearfix"></div>
+              </div>
+              <img :src="props.image" class="img-responsive container" alt="Project Title"> </a> 
+			    </div>
+			  <div style="display:block;font-size:90%;text-align:center">
+          <p>{{ props.title }}</p>
+            <div class="text-center center"><span class="badge badge-pill badge-primary">Python</span>
+              <span class="badge badge-pill badge-primary">Tableau</span>
+            </div>
+        </div>
+          </div>
+        </div>`
         
 })
+
 var projects = new Vue({
   el:'#proj',
+  
   data: {
     projects:[
-        {title:"Data Vis Debbie", subtitle:"hi im debbie", pageref:"datavis.html", img="img/datavis/calgaryMap.png"}
-
+        {title:"The Irene", subtitle:"A Button Project", pageref:"project-0.html", image:"img/portfolio/hakase.png"},
+        {title:"Girl Scout Sash", subtitle:"A Wearables Project", pageref:"project-1.html", image:"img/portfolio/project1.jpeg"},
+        {title:"Rooting For You", subtitle:"A Virtual Reality Project", pageref:"project-2.html", image:"img/portfolio/project2.png"},
+        {title:"Workplace Rhythm", subtitle:"A Button Project", pageref:"project-0.html", image:"img/portfolio/hakase.png"}
     ]
     
   }
