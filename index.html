@@ -91,7 +91,7 @@
       <div class="clearfix"></div>
       <p>Some of the projects I've done</p>
     </div>
-    <!-- <div class="categories" id="categories">
+    <div class="categories" id="categories">
       <ul class="cat">
         <li>
           <ol class="type">
@@ -103,14 +103,10 @@
         </li>
       </ul>
       <div class="clearfix"></div>
-    </div> -->
+    </div>
     <div class="row">
-      <div class="portfolio-items">
-        <div id="proj" >
-            <project v-for="project in projects"  v-bind:props="project"></project>
-        </div>
-
-        
+      <div class="portfolio-items" id="proj">
+            <project v-for="project in projects"  v-bind:props="project"></project>     
       </div>
     </div>
   </div>
@@ -363,7 +359,7 @@ Vue.component('project', {
   props:['props'],
   template: `
   
-  <div class="col-sm-12 col-md-4 col-lg-4 data-vis section-item" >
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" v-bind:class="props.filter">
           <div class="portfolio-item">
             <div class="hover-bg"> <a v-bind:href="props.pageref" >
               <div class="hover-text">
@@ -385,12 +381,18 @@ var projects = new Vue({
   el:'#proj',
   data: {
     projects:[
-        {title:"The Irene", subtitle:"A Button Project", pageref:"project-0.html", image:"img/portfolio/hakase.png"},
-        {title:"Girl Scout Sash", subtitle:"A Physical Interactive Sash", pageref:"project-1.html", image:"img/portfolio/project1.jpeg"},
-        {title:"Rooting For You", subtitle:"An Immersive Tree-Planting Simulation", pageref:"project-2.html", image:"img/portfolio/project2.png"},
-        {title:"Workplace Rhythm", subtitle:"An Attempt to Make a Hygge Workplace", pageref:"project-3.html", image:"img/portfolio/project3.png"},
-        {title:"Crime in Alberta", subtitle:"Visualization of Crime in Calgary and inter-Alberta", pageref:"datavis.html", image:"img/datavis/calgaryMap.png"},
-        {title:"BettyBot", subtitle:"An Elderly Care Robot", pageref:"bettybot.html", image:"img/portfolio/bettybotmain.png"}
+        {title:"The Irene", subtitle:"A Button Project", pageref:"project-0.html", 
+            image:"img/portfolio/hakase.png", filter:'hci'},
+        {title:"Girl Scout Sash", subtitle:"A Physical Interactive Sash", pageref:"project-1.html", 
+            image:"img/portfolio/project1.jpeg" ,filter:'hci'},
+        {title:"Rooting For You", subtitle:"An Immersive Tree-Planting Simulation", pageref:"project-2.html", 
+            image:"img/portfolio/project2.png", filter:'hci'},
+        {title:"Workplace Rhythm", subtitle:"An Attempt to Make a Hygge Workplace", pageref:"project-3.html", 
+            image:"img/portfolio/project3.png", filter:'hci'},
+        {title:"Crime in Alberta", subtitle:"Visualization of Crime in Calgary and inter-Alberta", 
+            pageref:"datavis.html", image:"img/datavis/calgaryMap.png", filter:'datavis'},
+        {title:"BettyBot", subtitle:"An Elderly Care Robot", pageref:"bettybot.html", 
+            image:"img/portfolio/bettybotmain.png",filter:'robotics'}
     ]
     
   }
