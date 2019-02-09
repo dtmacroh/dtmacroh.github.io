@@ -96,7 +96,7 @@
         <li>
           <ol class="type">
             <li style="margin-bottom:15px" v-for="cat in categories">
-              <a href="#" v-bind:data-filter="cat.filter" v-bind:class="{ active: cat.isActive }">{{cat.text}}</a>
+              <a href="#" :data-filter="cat.filter" :class="{ active: cat.isActive } " >{{cat.text}}</a>
             </li>
 
           </ol>
@@ -106,6 +106,8 @@
     </div>
     <div class="row">
       <div class="portfolio-items">
+          
+
         <div class="col-sm-12 col-md-4 col-lg-4 hci">
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="project-0.html" >
@@ -252,8 +254,11 @@
             </div>
          </div>
           </div>
-		 
+		
         </div>
+        <project id="proj" v-for="project in projects" v-bind:props="project">
+        
+        </project>
       </div>
     </div>
   </div>
@@ -433,7 +438,6 @@ Ensuring production environment stability and mitigating risks by assessing code
 
 
 
-
 <div style="position: absolute; bottom: 40px; right: 10px; font-size: 12px">
 	</div>
 
@@ -502,6 +506,39 @@ Ensuring production environment stability and mitigating risks by assessing code
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
 
+
+Vue.component('project', {
+  props:['props'],
+  template: '<div class="col-sm-12 col-md-4 col-lg-4 datavis section-item">\
+          <div class="portfolio-item">\
+            <div class="hover-bg"> <a v-bind:href="props.pageref" >\
+              <div class="hover-text">\
+                <h4>{{ props.title }}</h4>\
+                <small>{{ props.subtitle }}</small>\
+                <div class="clearfix"></div>\
+              </div>\
+              <img src="img/datavis/calgaryMap.png" class="img-responsive container" alt="Project Title"> </a> \
+			    </div>\
+			  <div style="display:block;font-size:90%;text-align:center">\
+          <p>Crime Analysis and Data Visualization</p>\
+            <div class="text-center center"><span class="badge badge-pill badge-primary">Python</span>\
+              <span class="badge badge-pill badge-primary">Tableau</span>\
+            </div>\
+        </div>\
+          </div>\
+        </div>'
+        
+})
+var projects = new Vue({
+  el:'#proj',
+  data: {
+    projects:[
+        {title:"Data Vis Debbie", subtitle:"hi im debbie", pageref:"datavis.html", img="img/datavis/calgaryMap.png"}
+
+    ]
+    
+  }
+})
 var categories = new Vue({
     el:'#categories',
     data:{
@@ -514,6 +551,9 @@ var categories = new Vue({
     }
   })
   
+ 
+
+
   
   </script>
 </body>
