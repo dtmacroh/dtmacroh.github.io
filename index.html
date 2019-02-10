@@ -104,7 +104,11 @@
     </div>
     <div class="row">
       <div class="portfolio-items" id="proj">
-            <project v-for="project in projects"  v-bind:props="project"></project>     
+        <project v-for="project in projects"  v-bind:props="project">
+            <div class="text-center center">  
+          <span v-for="e in project.exp" class="badge badge-pill badge-primary">{{e}}</span> 
+          </div>
+        </project>     
       </div>
     </div>
   </div>
@@ -369,7 +373,9 @@ Vue.component('project', {
 			    </div>
 			  <div style="display:block;font-size:90%;text-align:center">
           <p>{{ props.title }}</p>
-        </div>
+        
+          </div>
+          <slot></slot>
           </div>
         </div>`
         
@@ -380,17 +386,17 @@ var projects = new Vue({
   data: {
     projects:[
         {title:"The Irene", subtitle:"A Button Project", pageref:"project-0.html", 
-            image:"img/portfolio/hakase.png", filter:'hci'},
+            image:"img/portfolio/hakase.png", filter:'hci',exp:['WPF','C#']},
         {title:"Girl Scout Sash", subtitle:"A Physical Interactive Sash", pageref:"project-1.html", 
-            image:"img/portfolio/project1.jpeg" ,filter:'hci'},
+            image:"img/portfolio/project1.jpeg" ,filter:'hci',exp:['Arduino','RFID','Tangibles']},
         {title:"Rooting For You", subtitle:"An Immersive Tree-Planting Simulation", pageref:"project-2.html", 
-            image:"img/portfolio/project2.png", filter:'hci'},
+            image:"img/portfolio/project2.png", filter:'hci',exp:['Unity','VR']},
         {title:"Workplace Rhythm", subtitle:"An Attempt to Make a Hygge Workplace", pageref:"project-3.html", 
-            image:"img/portfolio/project3.png", filter:'hci'},
+            image:"img/portfolio/project3.png", filter:'hci',exp:['Kinect','Unity']},
         {title:"Crime in Alberta", subtitle:"Visualization of Crime in Calgary and inter-Alberta", 
-            pageref:"datavis.html", image:"img/datavis/calgaryMap.png", filter:'datavis'},
+            pageref:"datavis.html", image:"img/datavis/calgaryMap.png", filter:'datavis',exp:['Python','Tableau']},
         {title:"BettyBot", subtitle:"An Elderly Care Robot", pageref:"bettybot.html", 
-            image:"img/portfolio/bettybotmain.png",filter:'robotics'}
+            image:"img/portfolio/bettybotmain.png",filter:'robotics',exp:['Python','Powershell']}
     ]
     
   }
