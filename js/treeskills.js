@@ -94,13 +94,13 @@ var json_data = {
         "name": "ASP.NET MVC",
         "description": "One of the frameworks for Web Apps",
         "value": 12,
-        "free": true
+        
        },
        {
         "name": "WPF",
         "value": 4,
         "description": "Windows Presentation Foundation",
-        "free": true
+        
        }]
      },
      {
@@ -111,14 +111,13 @@ var json_data = {
         "children":[{
             "name": "Jupyter Anaconda",
             "description": "Language for querying data in databases",
-            "free": true
+           
         }]
     },
     {
         "name": "T-SQL",
         "value": 15,
-        "description": "Language for querying data in databases",
-        "free": true
+        "description": "Language for querying data in databases"
     }
     ]
    }
@@ -140,7 +139,8 @@ var diagonal = d3.svg.diagonal()
 var vis = d3.select("#treeskills").append("svg:svg")
     .attr("width", w + m[1] + m[3])
     .attr("height", h + m[0] + m[2])
-  .append("svg:g") 
+    .call(responsivefy)
+    .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
 root = json_data;
@@ -162,8 +162,33 @@ function toggleAll(d) {
   // toggle(root.children[9].children[0]);
 
  update(root);
+//credit to https://brendansudol.com/writing/responsive-d3 for this function
+ function responsivefy(svg) {
+    // get container + svg aspect ratio
+    var container = d3.select(svg.node().parentNode),
+        width = parseInt(svg.style("width")),
+        height = parseInt(svg.style("height")),
+        aspect = width / height;
 
+    // add viewBox and preserveAspectRatio properties,
+    // and call resize so that svg resizes on inital page load
+    svg.attr("viewBox", "0 0 " + width + " " + height)
+        .attr("perserveAspectRatio", "xMinYMid")
+        .call(resize);
 
+    // to register multiple listeners for same event type, 
+    // you need to add namespace, i.e., 'click.foo'
+    // necessary if you call invoke this function for multiple svgs
+    // api docs: https://github.com/mbostock/d3/wiki/Selections#on
+    d3.select(window).on("resize." + container.attr("id"), resize);
+
+    // get width of container and resize svg to fit it
+    function resize() {
+        var targetWidth = parseInt(container.style("width"));
+        svg.attr("width", targetWidth);
+        svg.attr("height", Math.round(targetWidth / aspect));
+    }
+}
 function update(source) {
   var duration = d3.event && d3.event.altKey ? 5000 : 500;
 
@@ -201,6 +226,7 @@ function update(source) {
       .style('fill', function(d) {
         return d.free ? 'black' : '#999';
       })
+      
       .style("fill-opacity", 1e-6);
 
   nodeEnter.append("svg:title")
@@ -215,7 +241,10 @@ function update(source) {
 
   nodeUpdate.select("circle")
       .attr("r", function(d) { return d.value; })
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+      .style('fill', function(d) {
+        return d.free ? '#fff' : 'lightgray';})
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; })
+      ;
 
   nodeUpdate.select("text")
       .style("fill-opacity", 1);
@@ -277,4 +306,8 @@ function toggle(d) {
     d.children = d._children;
     d._children = null;
   }
+}
+window.addEventListener('resize', drawChart);
+function updateHeight(winWidth){
+    height = .7 * width; 
 }
