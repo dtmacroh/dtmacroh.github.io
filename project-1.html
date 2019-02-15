@@ -75,8 +75,7 @@
 
 	<div class="section-item"><h2><span style="color:#a9f8dd; font-weight:bold"><font size="6" >PHYSICAL COMPUTING</font></span></h2></div>
 	
- 
-   
+
 <div class="center"  >
 <img src="img/project1/girlscoutbadge.jpeg" alt="Picture" style="width:75%;min-width:300px" />
 </div>
@@ -144,8 +143,8 @@
 	
 	<div class="row">
       <div class="portfolio-items" >
-          <div id="initsketch" >
-             <sketch :props="s" v-for="s in sketches"></sketch>
+          <div class="sketches" >
+             <sketch :props="s" v-for="s in initsketches"></sketch>
           </div>
      
 		
@@ -163,6 +162,7 @@
 	
 </div>
 
+
 <div id="refinement-sketches">
 	<div class="section-title center">
 	<h3>Refinement Sketches</h3>
@@ -170,7 +170,11 @@
 	<p>In these sketches I tried to define the context of the sash so it will be directed towards more specific users. Will it be for gamers? Or could it be used in a beauty pageant? One problem I ran into is the fact that, unless forced into it, nobody would realistically wear a sash in their normal day to day life. It was here in the refinement sketches that I decided to design a sash for girl scouts, since it is a part of their uniform anyways and it would be easier to use it. I was also a Girl Scout once back in the Philippines (a long time ago), and I thought it would be cool give the sash a makeover, and redefine what it does and what it looks like :)
 	</p>
 	<div class="row">
-      <div class="portfolio-items" id="refinement-sketches">
+      <div class="portfolio-items">
+          
+        <div class="sketches" >
+            <sketch :props="s" v-for="s in refsketches"></sketch>
+        </div>
         <div class="col-sm-12 col-md-4 col-lg-4">
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-1.jpg" rel="prettyPhoto">
@@ -395,9 +399,9 @@ Mod #2 - Sash Tag - Game of tag, played with the sash</small>
 })
 
 var sketches = new Vue({
-  el:'#initsketch',
+  el:'.sketches',
   data: {
-    sketches: [
+    initsketches: [
     
         {desc:"Initial ideas Part 1 -I was thinking of utility in an accessory.", image:"img/project1/new-doc-2017-10-16-1-1.jpg"},
         {desc:"Initial Ideas Part 2", image:"img/project1/new-doc-2017-10-16-1-2.jpg"},
@@ -408,9 +412,11 @@ var sketches = new Vue({
         {desc:"Bike Vest Part 1 of 2- would detect a fast car and warn the user of it.", image:"img/project1/new-doc-2017-10-16-1-12.jpg"},
         {desc:"Bike Idea Vest Part 2 of 2", image:"img/project1/new-doc-2017-10-16-1-13.jpg"},
         {desc:"Sleep Helmet Part 1 of 2 - Helps people struggling with insomnia to sleep.", image:"img/project1/new-doc-2017-10-16-1-5.jpg"},
-        {desc:"Sleep Helmet Part 2 of 2 - gently vibrates to help user wake up.", image:"img/project1/new-doc-2017-10-16-1-7.jpg"},
+        {desc:"Sleep Helmet Part 2 of 2 - gently vibrates to help user wake up.", image:"img/project1/new-doc-2017-10-16-1-7.jpg"}
       
-      ]
+      ],
+    refsketches:[{desc:"Initial ideas Part 1 -I was thinking of utility in an accessory.", image:"img/project1/new-doc-2017-10-16-1-1.jpg"}
+]
     
   }
 })
