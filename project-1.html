@@ -143,7 +143,7 @@
 	
 	<div class="row">
       <div class="portfolio-items" >
-          <div class="sketches" >
+          <div divs="initsketches" >
              <sketch :props="s" v-for="s in initsketches"></sketch>
           </div>
      
@@ -172,102 +172,10 @@
 	<div class="row">
       <div class="portfolio-items">
           
-        <div class="sketches" >
+        <div div="refsketches" >
             <sketch :props="s" v-for="s in refsketches"></sketch>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-1.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod # 1 - Gamer Sash - different color based on your rank worldwide. //
-Mod #2 - Sash Tag - Game of tag, played with the sash</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-1.jpg" class="img-responsive" > </a> </div>
-          </div>
-        </div>
-		
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-2.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>>Mod # 3 - Beauty Pageant Contestant</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-2.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-3.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Sash Tag variation</small>
-			
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-3.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-4.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod # 6 - Activity + Task bar combined // Mod #7 - Sash being used in a race</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-4.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-5.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod #8 - Sash punishes you for not finishing goals. // Mod#9 - depending on the location, sash will say/not say anything</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-5.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-6.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Karma Sash - meant for tracking class participation</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-6.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-7.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod #11 - Girl Scout Sash, can read a badge!</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-7.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-8.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod #12 - Girl Scout variation, sash now speaks!</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-8.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project1/new-doc-2017-10-16-9.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Girl Scout variation - Sash will say different things depending on the interaction</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project1/new-doc-2017-10-16-9.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
+        
 		
 	</div>
 	</div>
@@ -398,8 +306,8 @@ Mod #2 - Sash Tag - Game of tag, played with the sash</small>
         
 })
 
-var sketches = new Vue({
-  el:'.sketches',
+var initsketches = new Vue({
+  el:'initsketches',
   data: {
     initsketches: [
     
@@ -414,16 +322,22 @@ var sketches = new Vue({
         {desc:"Sleep Helmet Part 1 of 2 - Helps people struggling with insomnia to sleep.", image:"img/project1/new-doc-2017-10-16-1-5.jpg"},
         {desc:"Sleep Helmet Part 2 of 2 - gently vibrates to help user wake up.", image:"img/project1/new-doc-2017-10-16-1-7.jpg"}
       
-      ],
+      ]})
+  
+  var refsketches = new Vue({
+  el:'initsketches',
+  data: {
     refsketches:[
       {desc:"Mod # 1 - Gamer Sash - different color based on your rank worldwide. // \
             Mod #2 - Sash Tag - Game of tag, played with the sash", image:"img/project1/new-doc-2017-10-16-1.jpg"},
       {desc:"Mod # 3 - Beauty Pageant Contestant", image:"img/project1/new-doc-2017-10-16-2.jpg"},
       {desc:"Sash Tag variation", image:"img/project1/new-doc-2017-10-16-3.jpg"},
       {desc:"Mod # 6 - Activity + Task bar combined // Mod #7 - Sash being used in a race", image:"img/project1/new-doc-2017-10-16-4.jpg"},
- 
-
-]
+      {desc:"Mod #8 - Sash punishes you for not finishing goals. // Mod#9 - depending on the location, sash will say/not say anything", image:"img/project1/new-doc-2017-10-16-5.jpg"},
+      {desc:"Karma Sash - meant for tracking class participation", image:"img/project1/new-doc-2017-10-16-6.jpg"},
+      {desc:"Mod #11 - Girl Scout Sash, can read a badge!", image:"img/project1/new-doc-2017-10-16-7.jpg"},
+      {desc:"Mod #12 - Girl Scout variation, sash now speaks!", image:"img/project1/new-doc-2017-10-16-8.jpg"},
+      {desc:"Girl Scout variation - Sash will say different things depending on the interaction", image:"img/project1/new-doc-2017-10-16-9.jpg"}]
     
   }
 })
