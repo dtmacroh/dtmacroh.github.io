@@ -128,108 +128,9 @@
 	
 	<div class="row">
       <div class="portfolio-items">
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-13.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.1 - Angry Cashier - the more you throw things at a rude customer, the more your co-workers cheer.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-13.jpg" class="img-responsive" > </a> </div>
-          </div>
-        </div>
-		
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-17.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.2 Photosynthesis - helping kids learn about this concept through time lapse and various inputs.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-17.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-16.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.3 Avatar - have different elements appear on screen based on the type of interaction.</small>
-			
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-16.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-18.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.4 Trapped in Prison - You are a Computer Science student unjustly accused of making a virus and being thrown in jail because of it.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-18.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-19.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.5 Anxiety - in a busy environment, the more you squeeze, the more quiet the environment will be.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-19.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-20.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.6 Obnoxious person - the more noises you make, the more stares you get!</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-20.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-14.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.7 Tourist - explore Calgary and get more information by gazing at certain buildings or objects in downtown.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-14.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-15.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.8 Monster - Re-imagine yourself as a child who is scared of the dark.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-15.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-11.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.9 Audio Wonderland - each sound around you will form physically, according to where it is spatially located.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-11.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-12.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>2.10 Adventure Time - solve puzzles and hunt for treasures!</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-12.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
+        <div id="initsketches" >
+          <sketch :props="s" v-for="s in initsketches"></sketch>
+       </div>
 		
 	</div>
 	</div>
@@ -247,119 +148,9 @@
 	
 	<div class="row">
       <div class="portfolio-items">
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-21.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.1 - Thinking about various ways to make it interactions more meaningful.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-21.jpg" class="img-responsive" > </a> </div>
-          </div>
-        </div>
-		
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-22.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>>Mod 2.2 - Inspiration from Fort McMurray wildfires encouraged me to use my project to center a story around these events.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-22.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-23.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.3 - incorporated the idea of a mentor, to have more of a justification of a 360 video. Also included more authentic interactions by crouching or standing to plant the tree.</small>
-			
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-23.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-24.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.4 - Adding nodding or shaking head to add to interactions.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-24.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-25.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.5.1 - Initializing storyboard. </small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-25.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-26.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.5.2 - storyboard continuation</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-6.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-27.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.5.3 - Storyboard pt 3</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-27.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-28.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.6 - Manipulating time to see how the forest grows.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-28.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-29.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.7 - Mentor interactions increased</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-29.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-29.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.7 - Mentor interactions increased</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-29.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/project2/new-doc-2017-11-02-29.jpg" rel="prettyPhoto">
-              <div class="hover-text">
-                <small>Mod 2.11 - using social media APIs and posting a picture of your tree to a social media site. Reflective of the culture today.</small>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/project2/new-doc-2017-11-02-29.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-		
+        <div id="refsketches" >
+          <sketch :props="s" v-for="s in refsketches"></sketch>
+      </div>		
 	</div>
 	</div>
 	<p>In one of these refinement sketches, i switched gears from the idea of learning about photosynthesis to something more meaningful, like planting trees to regrow lost forestry. I started thinking about the news and recent events, like Fort McMurray and British Columbia wildfires, and decided to center a story around those events. I imagined what it was like to be in high school again: not having too much money but having a lot of free time, and back then, and having a vast array of volunteer opportunities to choose from. As a high school student, whenever tragedies like these happen, I wanted to help but didn't have the means to do so financially. I used to volunteer at the Mustard Seed or the Food Bank, and I would like others to feel what volunteering is like too. My hope for this project is to allow people to empathize with wildfire tragedies, and prompt them to action in a fun and interactive way by planting a virtual tree. So are you ready?... Let's grow!!!</p>
@@ -378,12 +169,7 @@
 	</div></div></div>
 	<div class="col-lg-5 col-md-5"><div class="portfolio-item"><div class="hover-bg" style="height:300px">
 	<img style="width:100%;" src = "img/project2/horse.png" class="img-responsive"/></div></div></div>
-	
-	
-
-	
 	<div class="col-xs-6 col-sm-3 col-md-6 col-lg-6"><div class="portfolio-item"><div class="hover-bg" style="height:250px"><img  style="width:100%;" src = "img/project2/firescene.png" class="img-responsive"/></div></div></div>
-	
 	<div class="col-xs-6 col-sm-3 col-md-6 col-lg-6"><div class="portfolio-item"><div class="hover-bg" style="height:250px"><img  style="width:100%;height:100%" src = "img/project2/classroom.png" class="img-responsive"/></div></div></div>
 	<div class="col-xs-6 col-sm-3 col-md-4 col-lg-4"><div class="portfolio-item"><div class="hover-bg" style="height:210px"><img  style="width:100%;height:100%" src = "img/project2/roadtofortmac.png" /></div></div></div>
 	<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"><div class="portfolio-item"><div class="hover-bg" style="height:210px"> <img style="width:100%;height:100%" src = "img/project2/tools.png" /></div></div></div>
@@ -478,6 +264,40 @@
           </div>
         </div>`
         
-})</script>
+})
+var initsketches = new Vue({
+  el:'#initsketches',
+  data: {
+    initsketches: [
+    
+        {desc:"2.1 - Angry Cashier - the more you throw things at a rude customer, the more your co-workers cheer.", image:"img/project2/new-doc-2017-11-02-13.jpg"},
+        {desc:"2.2 Photosynthesis - helping kids learn about this concept through time lapse and various inputs.", image:"img/project2/new-doc-2017-11-02-17.jpg"},
+        {desc:"2.3 Avatar - have different elements appear on screen based on the type of interaction.", image:"img/project2/new-doc-2017-11-02-16.jpg"},
+        {desc:"2.4 Trapped in Prison - You are a Computer Science student unjustly accused of making a virus and being thrown in jail because of it.", image:"img/project2/new-doc-2017-11-02-18.jpg"},
+        {desc:"2.5 Anxiety - in a busy environment, the more you squeeze, the more quiet the environment will be.", image:"img/project2/new-doc-2017-11-02-19.jpg"},
+        {desc:"2.6 Obnoxious person - the more noises you make, the more stares you get!", image:"img/project2/new-doc-2017-11-02-20.jpg"},
+        {desc:"2.7 Tourist - explore Calgary and get more information by gazing at certain buildings or objects in downtown.", image:"img/project2/new-doc-2017-11-02-14.jpg"},
+        {desc:"2.8 Monster - Re-imagine yourself as a child who is scared of the dark.", image:"img/project2/new-doc-2017-11-02-15.jpg"},
+        {desc:"2.9 Audio Wonderland - each sound around you will form physically, according to where it is spatially located.", image:"img/project2/new-doc-2017-11-02-11.jpg"},
+        {desc:"2.10 Adventure Time - solve puzzles and hunt for treasures!", image:"img/project2/new-doc-2017-11-02-12.jpg"}
+      
+      ]}})
+var refsketches = new Vue({
+  el:'#refsketches',
+  data: {
+    refsketches:[
+      {desc:"Mod 2.1 - Thinking about various ways to make it interactions more meaningful.", image:"img/project2/new-doc-2017-11-02-21.jpg"},
+      {desc:"Mod 2.2 - Inspiration from Fort McMurray wildfires encouraged me to use my project to center a story around these events.", image:"img/project2/new-doc-2017-11-02-22.jpg"},
+      {desc:"Mod 2.3 - incorporated the idea of a mentor, to have more of a justification of a 360 video. Also included more authentic interactions by crouching or standing to plant the tree.", image:"img/project2/new-doc-2017-11-02-23.jpg"},
+      {desc:"Mod 2.4 - Adding nodding or shaking head to add to interactions.", image:"img/project2/new-doc-2017-11-02-24.jpg"},
+      {desc:"Mod 2.5.1 - Initializing storyboard. ", image:"img/project2/new-doc-2017-11-02-25.jpg"},
+      {desc:"Mod 2.5.2 - storyboard continuation", image:"img/project2/new-doc-2017-11-02-6.jpg"},
+      {desc:"Mod 2.5.3 - Storyboard pt 3", image:"img/project2/new-doc-2017-11-02-27.jpg"},
+      {desc:"Mod 2.6 - Manipulating time to see how the forest grows.", image:"img/project2/new-doc-2017-11-02-28.jpg"},
+      {desc:"Mod 2.7 - Mentor interactions increased", image:"img/project2/new-doc-2017-11-02-30.jpg"}]
+    
+  }
+})
+</script>
 </body>
 </html>
