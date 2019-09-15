@@ -28,7 +28,7 @@ jQuery(document).ready(function($){
 			timeline.addClass('loaded');
 
 
-			currentTimeNode = $('.cd-horizontal-timeline > .timeline').find('[data-date="05/05/2016"]')
+			currentTimeNode = $('.cd-horizontal-timeline > .timeline').find('[data-date="19/02/2019"]')
 			console.log(currentTimeNode);
 			
 			event.preventDefault();
