@@ -4,33 +4,65 @@ var json_data = {
     "name": "Hi",
     "children": [
         {
-            "name": "Applications",
+            "name": "Data",
             "free": true,
-            "value": 6,
+            "value": 20,
             "description": "Interactive authoring tools",
-            "children": [{
-                    "name": " Visual Studio",
+            "children": [
+                {
+                    "name": "Reporting",
                     "value": 15,
                     "description": "Web-based 'cloud' applications for authoring data visualizations",
-                    "free": true
+                    "free": true,
+                    "children":[
+                        {
+                            "name": "WebFocus",
+                            "value": 5,
+                            "description": "Web-based 'cloud' applications for authoring data visualizations",
+                            "free": true
+                        },
+                        {
+                            "name": "Power BI",
+                            "value": 13,
+                            "free": true
+                        },
+                        {
+                            "name": "Tableau",
+                            "value": 9,
+                            "free": true
+                        },
+                        {
+                            "name": "SSRS",
+                            "value": 13,
+                            "description": "SQL Server Reporting Services",
+                            "free": true
+                        },
+                    ]
                 },
                 {
-                    "name": "WebFocus",
-                    "value": 5,
-                    "description": "Web-based 'cloud' applications for authoring data visualizations",
-                    "free": true
+                    "name": "Management",
+                    "value": 20,
+                    "children":[
+                    {
+                        "name": "SSMS",
+                        "value": 15,
+                        "description": "SQL Server Management Studio",
+                        "free": true
+                    }]
                 },
                 {
-                    "name": "SQL Server Management Studio",
+                    "name": "Integration",
                     "value": 15,
-                    "description": "For dealing with databases",
-                    "free": true
-                },
-                {
-                    "name": "Unity",
-                    "value": 4,
-                    "description": "Used in my multiple projects",
-                    "free": true
+                    "description": "Practicing ETL (Extract, Transform, Load) methods into a unified source.",
+                    "free": true,
+                    "children": [
+                        {
+                            "name": "SSIS",
+                            "value": 20,
+                            "description": "SQL Server Integration Services",
+                            "free": true
+                        }
+                    ]
                 }
             ]
         }, {
@@ -38,43 +70,83 @@ var json_data = {
             "description": "DOM",
             "value": 6,
             "free": true,
-            "children": [{
-                    "name": "HTML5",
-                    "value": 10,
-                    "description": "Markup Language",
-                    "free": true
-                },
+            "children": [
                 {
-                    "name": "CSS",
-                    "description": "Style Language",
-                    "free": true,
+                    "name": "Front-end",
                     "value": 10,
-                    "children": [{
-                        "name": "Bootstrap",
-                        "description": "CSS Framework",
-                        "value": 9,
-                        "free": true
-                    }]
-                },
-                {
-                    "name": "JavaScript",
-                    "description": "The language behind most browser-based DOM manipulations",
-                    "free": true,
-                    "value": 7,
-                    "children": [{
-                            "name": "JQuery",
-                            "value": 5,
-                            "description": "",
+                    "children":
+                    [
+                        {
+                            "name": "HTML5",
+                            "value": 10,
+                            "description": "Markup Language",
                             "free": true
                         },
                         {
-                            "name": "Angular",
-                            "value": 2,
+                            "name": "CSS",
+                            "description": "Style Language",
+                            "free": true,
+                            "value": 10,
+                            "children": [{
+                                "name": "Bootstrap",
+                                "description": "CSS Framework",
+                                "value": 9,
+                                "free": true
+                            }]
+                        },
+                        {
+                            "name": "JavaScript",
+                            "description": "The language behind most browser-based DOM manipulations",
+                            "free": true,
+                            "value": 7,
+                            "children": [{
+                                    "name": "JQuery",
+                                    "value": 5,
+                                    "description": "",
+                                    "free": true
+                                },
+                                {
+                                    "name": "Frameworks",
+                                    "value": 6,
+                                    "free": true,
+                                    "children":
+                                    [
+                                        {
+                                            "name": "Angular",
+                                            "value": 2,
+                                            "description": "One of the frameworks for Web Apps",
+                                            "free": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Back-end",
+                    "value": 20,
+                    "children":
+                    [
+                        {
+                            "name": "Entity Framework",
+                            "value": 15
+                        },
+                        {
+                            
+                            "name": "ASP.NET MVC",
                             "description": "One of the frameworks for Web Apps",
-                            "free": true
+                            "value": 12
+                        },
+                        {
+                            
+                            "name": "Node JS",
+                            "description": "One of the frameworks for Web Apps",
+                            "value": 9
                         }
                     ]
                 }
+                
             ]
         },
         {
@@ -89,17 +161,18 @@ var json_data = {
                     "description": "Language for applications like Unity, Web Apps",
                     "value": 10,
                     "free": true,
-                    "children": [{
-                            "name": "ASP.NET MVC",
-                            "description": "One of the frameworks for Web Apps",
-                            "value": 12,
-
-                        },
+                    "children": [
                         {
                             "name": "WPF",
                             "value": 4,
                             "description": "Windows Presentation Foundation",
 
+                        },
+                        {
+                            "name": "Unity",
+                            "value": 4,
+                            "description": "Used in multiple projects of mine.",
+                            "free": true
                         }
                     ]
                 },
