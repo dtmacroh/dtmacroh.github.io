@@ -229,16 +229,16 @@ function toggleAll(d) {
     if (d.children) {
         d.children.forEach(toggleAll);
         toggle(d);
+        update(d);
     }
 }
 
 // Initialize the display to show a few nodes.
-//root.children.forEach(toggle);
-// toggle(root.children[0]);
-// toggle(root.children[1]);
-// toggle(root.children[2]);
 
 update(root);
+root.children.forEach(toggleAll);
+
+
 //credit to https://brendansudol.com/writing/responsive-d3 for this function
 function responsivefy(svg) {
     // get container + svg aspect ratio
