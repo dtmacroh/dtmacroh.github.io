@@ -2,9 +2,10 @@
 
 var json_data = {
     "name": "Hi",
-    "children": [
+    "children": 
+    [
         {
-            "name": "Data",
+            "name": "Business Intelligence",
             "free": true,
             "value": 20,
             "description": "Interactive authoring tools",
@@ -33,7 +34,7 @@ var json_data = {
                         },
                         {
                             "name": "SSRS",
-                            "value": 13,
+                            "value": 16,
                             "description": "SQL Server Reporting Services",
                             "free": true
                         },
@@ -42,6 +43,7 @@ var json_data = {
                 {
                     "name": "Management",
                     "value": 20,
+                    "free": true,
                     "children":[
                     {
                         "name": "SSMS",
@@ -65,7 +67,8 @@ var json_data = {
                     ]
                 }
             ]
-        }, {
+        }, 
+        {
             "name": "Web Development",
             "description": "DOM",
             "value": 6,
@@ -230,11 +233,10 @@ function toggleAll(d) {
 }
 
 // Initialize the display to show a few nodes.
-root.children.forEach(toggleAll);
+//root.children.forEach(toggle);
+// toggle(root.children[0]);
 // toggle(root.children[1]);
-// toggle(root.children[1].children[2]);
-// toggle(root.children[9]);
-// toggle(root.children[9].children[0]);
+// toggle(root.children[2]);
 
 update(root);
 //credit to https://brendansudol.com/writing/responsive-d3 for this function
