@@ -1,3 +1,0 @@
-1. How many businesses are there per energy industry?
-2. What is the business per industry that consumes the most energy?
-3. What is the trend of energy consumption across the years? Are we consuming more energy on average?
