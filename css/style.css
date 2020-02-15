@@ -22,13 +22,13 @@ h3 {
 	font-weight: 700;
 }
 h4 {
-	font-size: 20px;
+	font-size: 18px;
 	color: #666;
 }
 h5 {
 	text-transform: uppercase;
-	font-weight: 700;
-	line-height: 20px;
+	font-weight: 300;
+	line-height: 25px;
 }
 p {
 	font-family: 'Open Sans', sans-serif; 
@@ -688,4 +688,15 @@ img.img-circle.team-img {
 
 	border: none;
 
+}
+#arcurve
+{
+	color: #b2491c;
+}
+#bridgewaterbank
+{
+	color: #00529b9c;
+}
+#uofc{
+	color:black;
 }

@@ -241,89 +241,12 @@
 
       </div>
 
-      <div id="initial-sketches">
-        <div class="section-title center">
-          <h3>Initial Sketches</h3>
+      <div class="row">
+        <div class="portfolio-items">
+          <div id="initrefsketches">
+            <sketch :props="s" v-for="s in initrefsketches"></sketch>
+          </div>
         </div>
-        <p>Here are my initial refinement sketches pertaining to story-telling and jam sessions:​
-
-        </p>
-        <div class="row">
-          <div class="portfolio-items">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="portfolio-item">
-                <div class="hover-bg">
-                  <a href="img/project3/new-doc-2017-11-26-3.jpg" rel="prettyPhoto">
-                    <div class="hover-text">
-                      <small>Similar to the engraving stuff into stone concept to have a record of a memory or story</small>
-                      <div class="clearfix"></div>
-                    </div>
-                    <img src="img/project3/new-doc-2017-11-26-3.jpg" class="img-responsive"> </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="portfolio-item">
-                <div class="hover-bg">
-                  <a href="img/project3/new-doc-2017-11-26-4.jpg" rel="prettyPhoto">
-                    <div class="hover-text">
-                      <small>>Multiple people expressing themselves on a virtual board.</small>
-                      <div class="clearfix"></div>
-                    </div>
-                    <img src="img/project3/new-doc-2017-11-26-4.jpg" class="img-responsive" alt="Project Title"> </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="portfolio-item">
-                <div class="hover-bg">
-                  <a href="img/project3/new-doc-2017-11-26-5.jpg" rel="prettyPhoto">
-                    <div class="hover-text">
-                      <small>Making music collaboratively by pretending one single person is an instrument.</small>
-
-                      <div class="clearfix"></div>
-                    </div>
-                    <img src="img/project3/new-doc-2017-11-26-5.jpg" class="img-responsive" alt="Project Title"> </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="portfolio-item">
-                <div class="hover-bg">
-                  <a href="img/project3/new-doc-2017-11-26-6.jpg" rel="prettyPhoto">
-                    <div class="hover-text">
-                      <small>Drum circle idea inspired by jam sessions - pottery and drum circle mashup</small>
-                      <div class="clearfix"></div>
-                    </div>
-                    <img src="img/project3/new-doc-2017-11-26-6.jpg" class="img-responsive" alt="Project Title"> </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="portfolio-item">
-                <div class="hover-bg">
-                  <a href="img/project3/new-doc-2017-11-26-10.jpg" rel="prettyPhoto">
-                    <div class="hover-text">
-                      <small>Each action done adds to the overall image on screen</small>
-                      <div class="clearfix"></div>
-                    </div>
-                    <img src="img/project3/new-doc-2017-11-26-10.jpg" class="img-responsive" alt="Project Title"> </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="portfolio-item">
-                <div class="hover-bg">
-                  <a href="img/project3/new-doc-2017-11-26-11.jpg" rel="prettyPhoto">
-                    <div class="hover-text">
-                      <small>People make up the environment for storytelling, while one person draws over their outlines</small>
-                      <div class="clearfix"></div>
-                    </div>
-                    <img src="img/project3/new-doc-2017-11-26-11.jpg" class="img-responsive" alt="Project Title"> </a>
-                </div>
-              </div>
-            </div>
 
 
 
@@ -790,7 +713,7 @@
           initrefsketches: [
 
             {
-              desc: "Similar to the engraving stuff into stone concept to have a record of a memory or story",
+              desc: "Similar to the engraving stuff into stone concept to have a record of a memory or story.",
               image: "img/project3/new-doc-2017-11-26-3.jpg"
             },
             {
@@ -806,12 +729,61 @@
               image: "img/project3/new-doc-2017-11-26-6.jpg"
             },
             {
-              desc: "3.5 - Retail Hygge - Detects the facial expressions of the customer and has different responses to them.",
-              image: "img/project3/new-doc-2017-11-14-10.jpg"
+              desc: "Each action done adds to the overall image on screen.",
+              image: "img/project3/new-doc-2017-11-26-10.jpg"
             },
             {
-              desc: "3.6 - Getaway - Did you know most Danes have a summer house? This idea incorporates 360 video as a ways to get away from reality.",
-              image: "img/project3/new-doc-2017-11-14-11.jpg"
+              desc: "People make up the environment for storytelling, while one person draws over their outlines.",
+              image: "img/project3/new-doc-2017-11-26-11.jpg"
+            }
+          ]
+        }
+      })
+
+      var refsketches = new Vue({
+        el: '#refsketches',
+        data: {
+          refsketches: [
+
+            {
+              desc: "Mod 3.11 - Rotating the drum circle so it would change the rotation of the clay object on screen.",
+              image: "img/project3/new-doc-2017-11-26-13.jpg"
+            },
+            {
+              desc: "Mod 3.12 - Change the color of the clay object based on each person&#x27;s position.",
+              image: "img/project3/new-doc-2017-11-26-14.jpg"
+            },
+            {
+              desc: "Mod 3.13.1 - Thinking about how to make a high school classroom hygge.",
+              image: "img/project3/new-doc-2017-11-26-15.jpg"
+            },
+            {
+              desc: "Mod 3.13.2 - Students in the high school classroom try to make up a letter, playing with the idea of emergence.",
+              image: "img/project3/new-doc-2017-11-26-16.jpg"
+            },
+            {
+              desc: "Mod 3.14 - People doing the same action will make modifications to the clay object. Playing with the idea of working together to achieve one goal.",
+              image: "img/project3/new-doc-2017-11-26-17.jpg"
+            },
+            {
+              desc: "Mod 3.15 - Each person coming into the room will have a sound of their own, which will last until they leave.",
+              image: "img/project3/new-doc-2017-11-26-18.jpg"
+            },
+            {
+              desc: "Mod 3.16.1 - Here I considered the proximity principle and used this concept in this revision sketch.",
+              image: "img/project3/new-doc-2017-11-26-19.jpg"
+            },
+            {
+              desc: "Mod 3.16.2 - Distance between the leftmost person and the rightmost person affects sound reverb, which means they would have to come closer together.",
+              image: "img/project3/new-doc-2017-11-26-20.jpg"
+            },
+            {
+              desc: "Mod 3.18.1 - Considering workplace dynamics, would having two people too close together make other people uncomfortable?",
+              image: "img/project3/new-doc-2017-11-26-23.jpg"
+            },
+            {
+              desc: "Mod 3.18.2 - Considering the orientation of two people (facing towards each other) as a possible indicator of closeness.",
+              image: "img/project3/new-doc-2017-11-26-24.jpg"
             }
           ]
         }

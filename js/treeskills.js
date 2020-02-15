@@ -1,127 +1,203 @@
 // credit goes to https://codepen.io/zhulinpinyu/pen/EaZrmM for js file of the tree
 
 var json_data = {
- "name": "Hi",
- "children": [
-   {
-    "name": "Applications",
-    "free": true,
-    "value": 6,
-    "description": "Interactive authoring tools",
-    "children": [
-    {
-        "name": " Visual Studio",
-        "value": 15,
-        "description": "Web-based 'cloud' applications for authoring data visualisations",
-        "free": true
+    "name": "Hi",
+    "children": 
+    [
+        {
+            "name": "Business Intelligence",
+            "free": true,
+            "value": 20,
+            "description": "Interactive authoring tools",
+            "children": [
+                {
+                    "name": "Reporting",
+                    "value": 15,
+                    "description": "Web-based 'cloud' applications for authoring data visualizations",
+                    "free": true,
+                    "children":[
+                        {
+                            "name": "WebFocus",
+                            "value": 5,
+                            "description": "Web-based 'cloud' applications for authoring data visualizations",
+                            "free": true
+                        },
+                        {
+                            "name": "Power BI",
+                            "value": 13,
+                            "free": true
+                        },
+                        {
+                            "name": "Tableau",
+                            "value": 9,
+                            "free": true
+                        },
+                        {
+                            "name": "SSRS",
+                            "value": 16,
+                            "description": "SQL Server Reporting Services",
+                            "free": true
+                        },
+                    ]
+                },
+                {
+                    "name": "Management",
+                    "value": 20,
+                    "free": true,
+                    "children":[
+                    {
+                        "name": "SSMS",
+                        "value": 15,
+                        "description": "SQL Server Management Studio",
+                        "free": true
+                    }]
+                },
+                {
+                    "name": "Integration",
+                    "value": 15,
+                    "description": "Practicing ETL (Extract, Transform, Load) methods into a unified source.",
+                    "free": true,
+                    "children": [
+                        {
+                            "name": "SSIS",
+                            "value": 20,
+                            "description": "SQL Server Integration Services",
+                            "free": true
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Web Development",
+            "description": "DOM",
+            "value": 6,
+            "free": true,
+            "children": [
+                {
+                    "name": "Front-end",
+                    "value": 10,
+                    "children":
+                    [
+                        {
+                            "name": "HTML5",
+                            "value": 10,
+                            "description": "Markup Language",
+                            "free": true
+                        },
+                        {
+                            "name": "CSS",
+                            "description": "Style Language",
+                            "free": true,
+                            "value": 10,
+                            "children": [{
+                                "name": "Bootstrap",
+                                "description": "CSS Framework",
+                                "value": 9,
+                                "free": true
+                            }]
+                        },
+                        {
+                            "name": "JavaScript",
+                            "description": "The language behind most browser-based DOM manipulations",
+                            "free": true,
+                            "value": 7,
+                            "children": [{
+                                    "name": "JQuery",
+                                    "value": 5,
+                                    "description": "",
+                                    "free": true
+                                },
+                                {
+                                    "name": "Frameworks",
+                                    "value": 6,
+                                    "free": true,
+                                    "children":
+                                    [
+                                        {
+                                            "name": "Angular",
+                                            "value": 2,
+                                            "description": "One of the frameworks for Web Apps",
+                                            "free": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Back-end",
+                    "value": 20,
+                    "children":
+                    [
+                        {
+                            "name": "Entity Framework",
+                            "value": 15
+                        },
+                        {
+                            
+                            "name": "ASP.NET MVC",
+                            "description": "One of the frameworks for Web Apps",
+                            "value": 12
+                        },
+                        {
+                            
+                            "name": "Node JS",
+                            "description": "One of the frameworks for Web Apps",
+                            "value": 9
+                        }
+                    ]
+                }
+                
+            ]
         },
-     {
-      "name": "WebFocus",
-      "value": 5,
-      "description": "Web-based 'cloud' applications for authoring data visualisations",
-      "free": true
-     },
-     {
-      "name": "SQL Server Management Studio",
-      "value": 15,
-      "description": "For dealing with databases",
-      "free": true
-     },
-     {
-        "name": "Unity",
-        "value": 4,
-        "description": "Used in my multiple projects",
-        "free": true
-       }
+        {
+            "name": "Programming Languages",
+            "description": "Coding Languages",
+            "free": true,
+            "value": 6,
+            "children": [
+
+                {
+                    "name": "C#",
+                    "description": "Language for applications like Unity, Web Apps",
+                    "value": 10,
+                    "free": true,
+                    "children": [
+                        {
+                            "name": "WPF",
+                            "value": 4,
+                            "description": "Windows Presentation Foundation",
+
+                        },
+                        {
+                            "name": "Unity",
+                            "value": 4,
+                            "description": "Used in multiple projects of mine.",
+                            "free": true
+                        }
+                    ]
+                },
+                {
+                    "name": "Python",
+                    "description": "Python's a very popular language in data science and is a pleasant language to learn and use",
+                    "free": true,
+                    "value": 8,
+                    "children": [{
+                        "name": "Jupyter Anaconda",
+                        "description": "Language for querying data in databases",
+
+                    }]
+                },
+                {
+                    "name": "T-SQL",
+                    "value": 15,
+                    "description": "Language for querying data in databases"
+                }
+            ]
+        }
     ]
-   },{
-    "name": "Web Development",
-    "description": "DOM",
-    "value": 6,
-    "free": true,
-    "children":[{
-        "name": "HTML5",
-        "value": 10,
-        "description": "Markup Language",
-        "free": true
-       },
-       {
-        "name": "CSS",
-        "description": "Style Language",
-        "free": true,
-        "value": 10,
-        "children":[{
-            "name": "Bootstrap",
-            "description": "CSS Framework",
-            "value": 9,
-            "free": true
-           }]
-       },
-       {
-        "name": "JavaScript",
-        "description": "The language behind most browser-based DOM manipulations",
-        "free": true,
-        "value": 7,
-        "children":[{
-          "name": "JQuery",
-          "value": 5,
-          "description": "",
-          "free": true
-         },
-         {
-            "name": "Angular",
-            "value": 2,
-            "description": "One of the frameworks for Web Apps",
-            "free": true
-           }
-        ]
-       }
-    ]
-   },
-   {
-    "name": "Programming Languages",
-    "description": "Coding Languages",
-    "free": true,
-    "value": 6,
-    "children": [
-     
-     {
-      "name": "C#",
-      "description": "Language for applications like Unity, Web Apps",
-      "value": 10,
-      "free": true,
-     "children":[{
-        "name": "ASP.NET MVC",
-        "description": "One of the frameworks for Web Apps",
-        "value": 12,
-        
-       },
-       {
-        "name": "WPF",
-        "value": 4,
-        "description": "Windows Presentation Foundation",
-        
-       }]
-     },
-     {
-        "name": "Python",
-        "description": "Python's a very popular language in data science and is a pleasant language to learn and use",
-        "free": true,
-        "value": 8,
-        "children":[{
-            "name": "Jupyter Anaconda",
-            "description": "Language for querying data in databases",
-           
-        }]
-    },
-    {
-        "name": "T-SQL",
-        "value": 15,
-        "description": "Language for querying data in databases"
-    }
-    ]
-   }
- ]
 }
 
 var m = [20, 120, 20, 20],
@@ -134,7 +210,9 @@ var tree = d3.layout.tree()
     .size([h, w]);
 
 var diagonal = d3.svg.diagonal()
-    .projection(function(d) { return [d.y, d.x]; });
+    .projection(function (d) {
+        return [d.y, d.x];
+    });
 
 var vis = d3.select("#treeskills").append("svg:svg")
     .attr("width", w + m[1] + m[3])
@@ -148,22 +226,21 @@ root.x0 = h / 2;
 root.y0 = 0;
 
 function toggleAll(d) {
-  if (d.children) {
-    d.children.forEach(toggleAll);
-    toggle(d);
-  }
+    if (d.children) {
+        d.children.forEach(toggleAll);
+        toggle(d);
+        update(d);
+    }
 }
 
-  // Initialize the display to show a few nodes.
-  // root.children.forEach(toggleAll);
-  // toggle(root.children[1]);
-  // toggle(root.children[1].children[2]);
-  // toggle(root.children[9]);
-  // toggle(root.children[9].children[0]);
+// Initialize the display to show a few nodes.
 
- update(root);
+update(root);
+root.children.forEach(toggleAll);
+
+
 //credit to https://brendansudol.com/writing/responsive-d3 for this function
- function responsivefy(svg) {
+function responsivefy(svg) {
     // get container + svg aspect ratio
     var container = d3.select(svg.node().parentNode),
         width = parseInt(svg.style("width")),
@@ -189,125 +266,165 @@ function toggleAll(d) {
         svg.attr("height", Math.round(targetWidth / aspect));
     }
 }
+
 function update(source) {
-  var duration = d3.event && d3.event.altKey ? 5000 : 500;
+    var duration = d3.event && d3.event.altKey ? 5000 : 500;
 
-  // Compute the new tree layout.
-  var nodes = tree.nodes(root).reverse();
+    // Compute the new tree layout.
+    var nodes = tree.nodes(root).reverse();
 
-  // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 180; });
-
-  // Update the nodes…
-  var node = vis.selectAll("g.node")
-      .data(nodes, function(d) { return d.id || (d.id = ++i); });
-
-  // Enter any new nodes at the parent's previous position.
-  var nodeEnter = node.enter().append("svg:g")
-      .attr("class", "node")
-      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-      .on("click", function(d) { toggle(d); update(d); });
-
-  nodeEnter.append("svg:circle")
-      .attr("r", 1e-6)
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
-
-  nodeEnter.append('a')
-      .attr('xlink:href', function(d) {
-        return d.url;
-      })
-      .append("svg:text")
-      .attr("x", function(d) { 
-        return d.children || d._children ? 
-        (d.value + 4) * -1 : d.value + 4 })
-      .attr("dy", ".35em")
-      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
-      .text(function(d) { return d.name; })
-      .style('fill', function(d) {
-        return d.free ? 'black' : '#999';
-      })
-      
-      .style("fill-opacity", 1e-6);
-
-  nodeEnter.append("svg:title")
-    .text(function(d) {
-      return d.description;
+    // Normalize for fixed-depth.
+    nodes.forEach(function (d) {
+        d.y = d.depth * 180;
     });
 
-  // Transition nodes to their new position.
-  var nodeUpdate = node.transition()
-      .duration(duration)
-      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+    // Update the nodes…
+    var node = vis.selectAll("g.node")
+        .data(nodes, function (d) {
+            return d.id || (d.id = ++i);
+        });
 
-  nodeUpdate.select("circle")
-      .attr("r", function(d) { return d.value; })
-      .style('fill', function(d) {
-        return d.free ? '#fff' : 'lightgray';})
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; })
-      ;
+    // Enter any new nodes at the parent's previous position.
+    var nodeEnter = node.enter().append("svg:g")
+        .attr("class", "node")
+        .attr("transform", function (d) {
+            return "translate(" + source.y0 + "," + source.x0 + ")";
+        })
+        .on("click", function (d) {
+            toggle(d);
+            update(d);
+        });
 
-  nodeUpdate.select("text")
-      .style("fill-opacity", 1);
+    nodeEnter.append("svg:circle")
+        .attr("r", 1e-6)
+        .style("fill", function (d) {
+            return d._children ? "lightsteelblue" : "#fff";
+        });
 
-  // Transition exiting nodes to the parent's new position.
-  var nodeExit = node.exit().transition()
-      .duration(duration)
-      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
-      .remove();
+    nodeEnter.append('a')
+        .attr('xlink:href', function (d) {
+            return d.url;
+        })
+        .append("svg:text")
+        .attr("x", function (d) {
+            return d.children || d._children ?
+                (d.value + 4) * -1 : d.value + 4
+        })
+        .attr("dy", ".35em")
+        .attr("text-anchor", function (d) {
+            return d.children || d._children ? "end" : "start";
+        })
+        .text(function (d) {
+            return d.name;
+        })
+        .style('fill', function (d) {
+            return d.free ? 'black' : '#999';
+        })
 
-  nodeExit.select("circle")
-      .attr("r", 1e-6);
+        .style("fill-opacity", 1e-6);
 
-  nodeExit.select("text")
-      .style("fill-opacity", 1e-6);
+    nodeEnter.append("svg:title")
+        .text(function (d) {
+            return d.description;
+        });
 
-  // Update the links…
-  var link = vis.selectAll("path.link")
-      .data(tree.links(nodes), function(d) { return d.target.id; });
+    // Transition nodes to their new position.
+    var nodeUpdate = node.transition()
+        .duration(duration)
+        .attr("transform", function (d) {
+            return "translate(" + d.y + "," + d.x + ")";
+        });
 
-  // Enter any new links at the parent's previous position.
-  link.enter().insert("svg:path", "g")
-      .attr("class", "link")
-      .attr("d", function(d) {
-        var o = {x: source.x0, y: source.y0};
-        return diagonal({source: o, target: o});
-      })
-    .transition()
-      .duration(duration)
-      .attr("d", diagonal);
+    nodeUpdate.select("circle")
+        .attr("r", function (d) {
+            return d.value;
+        })
+        .style('fill', function (d) {
+            return d.free ? '#fff' : 'lightgray';
+        })
+        .style("fill", function (d) {
+            return d._children ? "lightsteelblue" : "#fff";
+        });
 
-  // Transition links to their new position.
-  link.transition()
-      .duration(duration)
-      .attr("d", diagonal);
+    nodeUpdate.select("text")
+        .style("fill-opacity", 1);
 
-  // Transition exiting nodes to the parent's new position.
-  link.exit().transition()
-      .duration(duration)
-      .attr("d", function(d) {
-        var o = {x: source.x, y: source.y};
-        return diagonal({source: o, target: o});
-      })
-      .remove();
+    // Transition exiting nodes to the parent's new position.
+    var nodeExit = node.exit().transition()
+        .duration(duration)
+        .attr("transform", function (d) {
+            return "translate(" + source.y + "," + source.x + ")";
+        })
+        .remove();
 
-  // Stash the old positions for transition.
-  nodes.forEach(function(d) {
-    d.x0 = d.x;
-    d.y0 = d.y;
-  });
+    nodeExit.select("circle")
+        .attr("r", 1e-6);
+
+    nodeExit.select("text")
+        .style("fill-opacity", 1e-6);
+
+    // Update the links…
+    var link = vis.selectAll("path.link")
+        .data(tree.links(nodes), function (d) {
+            return d.target.id;
+        });
+
+    // Enter any new links at the parent's previous position.
+    link.enter().insert("svg:path", "g")
+        .attr("class", "link")
+        .attr("d", function (d) {
+            var o = {
+                x: source.x0,
+                y: source.y0
+            };
+            return diagonal({
+                source: o,
+                target: o
+            });
+        })
+        .transition()
+        .duration(duration)
+        .attr("d", diagonal);
+
+    // Transition links to their new position.
+    link.transition()
+        .duration(duration)
+        .attr("d", diagonal);
+
+    // Transition exiting nodes to the parent's new position.
+    link.exit().transition()
+        .duration(duration)
+        .attr("d", function (d) {
+            var o = {
+                x: source.x,
+                y: source.y
+            };
+            return diagonal({
+                source: o,
+                target: o
+            });
+        })
+        .remove();
+
+    // Stash the old positions for transition.
+    nodes.forEach(function (d) {
+        d.x0 = d.x;
+        d.y0 = d.y;
+    });
 }
 
 // Toggle children.
 function toggle(d) {
-  if (d.children) {
-    d._children = d.children;
-    d.children = null;
-  } else {
-    d.children = d._children;
-    d._children = null;
-  }
+    if (d.children) {
+        d._children = d.children;
+        d.children = null;
+    } else {
+        d.children = d._children;
+        d._children = null;
+    }
 }
 window.addEventListener('resize', drawChart);
-function updateHeight(winWidth){
-    height = .7 * width; 
+
+function updateHeight(winWidth) {
+    height = .7 * width;
 }
