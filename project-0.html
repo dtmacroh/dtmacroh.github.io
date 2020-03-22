@@ -142,8 +142,15 @@ and be delighted.</div>
 	</p>
 	</div>
 	
-	
 	<div class="row">
+        <div class="portfolio-items">
+          <div id="initsketches">
+            <sketch :props="s" v-for="s in initsketches"></sketch>
+          </div>
+		</div>
+	</div>
+
+	<!-- <div class="row">
       <div class="portfolio-items">
         <div class="col-sm-12 col-md-4 col-lg-4">
           <div class="portfolio-item">
@@ -208,7 +215,7 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
           </div>
         </div>
 	</div>
-	</div>
+	</div> -->
 	
 	
 	
@@ -413,5 +420,100 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
 <!-- Javascripts
     ================================================== --> 
 <script type="text/javascript" src="js/main.js"></script>
+<script src="js/vue.js"></script>
+	<script>
+		Vue.component('sketch', {
+        props: ['props'],
+        template: `
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a :href="props.image" rel="prettyPhoto">
+              <div class="hover-text">
+                <small>{{ props.desc }}</small>
+                <div class="clearfix"></div>
+              </div>
+              <img :src="props.image" class="img-responsive" > </a> </div>
+          </div>
+        </div>`
+
+      })
+			var initsketches = new Vue({
+			el: '#initsketches',
+			data: {
+				initsketches: [
+
+					{
+						desc: "Top - Character creates random things to signify Irene&#x27;s love for creating things. Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!",
+						image: "img/project0/new-doc-2017-12-03-1-1.jpg"
+					},
+					{
+						desc: "Reliving Irene&#x27;s favorite memory.",
+						image: "img/project0/new-doc-2017-12-03-1-6_orig.jpg"
+					},
+					{
+						desc: "Irene&#x27;s favorite job - working at the lab",
+						image: "img/project0/new-doc-2017-12-03-1-6_orig.jpg"
+					},
+					{
+						desc: "Integrating Irene&#x27;s love to create",
+						image: "img/project0/new-doc-2017-12-03-1-9_orig.jpg"
+					},
+					{
+						desc: "Hakase plays \"Careless Whisper\". <br/>I have to admit, I took my creative </br>liberties with this one :)",
+						image: "img/project0/new-doc-2017-12-03-1-10_orig.jpg"
+					},
+					{
+						desc: "Hakase appears out of nowhere randomly",
+						image: "img/project1/new-doc-2017-10-16-1-8.jpg"
+					}
+				]
+			}
+		})
+
+		var refsketches = new Vue({
+			el: '#refsketches',
+			data: {
+				refsketches: [{
+						desc: "Mod # 1 ",
+						image: "img/project1/new-doc-2017-10-16-1.jpg"
+					},
+					{
+						desc: "Mod # 3 - Beauty Pageant Contestant",
+						image: "img/project1/new-doc-2017-10-16-2.jpg"
+					},
+					{
+						desc: "Sash Tag variation",
+						image: "img/project1/new-doc-2017-10-16-3.jpg"
+					},
+					{
+						desc: "Mod # 6 - Activity + Task bar combined // Mod #7 - Sash being used in a race",
+						image: "img/project1/new-doc-2017-10-16-4.jpg"
+					},
+					{
+
+						desc: "Mod #8 - Sash punishes you for not finishing goals. // Mod#9 - depending on the location, sash will say/not say anything",
+						image: "img/project1/new-doc-2017-10-16-5.jpg"
+					},
+					{
+						desc: "Karma Sash - meant for tracking class participation",
+						image: "img/project1/new-doc-2017-10-16-6.jpg"
+					},
+					{
+						desc: "Mod #11 - Girl Scout Sash, can read a badge!",
+						image: "img/project1/new-doc-2017-10-16-7.jpg"
+					},
+					{
+						desc: "Mod #12 - Girl Scout variation, sash now speaks!",
+						image: "img/project1/new-doc-2017-10-16-8.jpg"
+					},
+					{
+						desc: "Girl Scout variation - Sash will say different things depending on the interaction",
+						image: "img/project1/new-doc-2017-10-16-9.jpg"
+					}
+				]
+
+			}
+		})
+	</script>
 </body>
 </html>
