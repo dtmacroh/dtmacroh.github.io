@@ -142,8 +142,15 @@ and be delighted.</div>
 	</p>
 	</div>
 	
-	
 	<div class="row">
+        <div class="portfolio-items">
+          <div id="initsketches">
+            <sketch :props="s" v-for="s in initsketches"></sketch>
+          </div>
+		</div>
+	</div>
+
+	<!-- <div class="row">
       <div class="portfolio-items">
         <div class="col-sm-12 col-md-4 col-lg-4">
           <div class="portfolio-item">
@@ -208,7 +215,7 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
           </div>
         </div>
 	</div>
-	</div>
+	</div> -->
 	
 	
 	
@@ -414,8 +421,22 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
     ================================================== --> 
 <script type="text/javascript" src="js/main.js"></script>
 <script src="js/vue.js"></script>
-<script src="js/sketch-components.js"></script>
 	<script>
+		Vue.component('sketch', {
+        props: ['props'],
+        template: `
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a :href="props.image" rel="prettyPhoto">
+              <div class="hover-text">
+                <small>{{ props.desc }}</small>
+                <div class="clearfix"></div>
+              </div>
+              <img :src="props.image" class="img-responsive" > </a> </div>
+          </div>
+        </div>`
+
+      })
 			var initsketches = new Vue({
 			el: '#initsketches',
 			data: {
@@ -444,24 +465,7 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
 					{
 						desc: "Hakase appears out of nowhere randomly",
 						image: "img/project1/new-doc-2017-10-16-1-8.jpg"
-					},
-					{
-						desc: "Bike Vest Part 1 of 2- would detect a fast car and warn the user of it.",
-						image: "img/project1/new-doc-2017-10-16-1-12.jpg"
-					},
-					{
-						desc: "Bike Idea Vest Part 2 of 2",
-						image: "img/project1/new-doc-2017-10-16-1-13.jpg"
-					},
-					{
-						desc: "Sleep Helmet Part 1 of 2 - Helps people struggling with insomnia to sleep.",
-						image: "img/project1/new-doc-2017-10-16-1-5.jpg"
-					},
-					{
-						desc: "Sleep Helmet Part 2 of 2 - gently vibrates to help user wake up.",
-						image: "img/project1/new-doc-2017-10-16-1-7.jpg"
 					}
-
 				]
 			}
 		})
@@ -470,8 +474,7 @@ Bottom - Iterate through Irene&#x27;s 30 favorite anime characters!</small>
 			el: '#refsketches',
 			data: {
 				refsketches: [{
-						desc: "Mod # 1 - Gamer Sash - different color based on your rank worldwide. // \
-            Mod #2 - Sash Tag - Game of tag, played with the sash",
+						desc: "Mod # 1 ",
 						image: "img/project1/new-doc-2017-10-16-1.jpg"
 					},
 					{
