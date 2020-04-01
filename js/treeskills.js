@@ -98,6 +98,12 @@ var json_data = {
                             }]
                         },
                         {
+                            "name": "Power Apps",
+                            "description": "No code development",
+                            "free": true,
+                            "value": 10
+                        },
+                        {
                             "name": "JavaScript",
                             "description": "The language behind most browser-based DOM manipulations",
                             "free": true,
