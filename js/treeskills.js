@@ -5,7 +5,7 @@ var json_data = {
     "children": 
     [
         {
-            "name": "Business Intelligence",
+            "name": "Data",
             "free": true,
             "value": 20,
             "description": "Interactive authoring tools",
