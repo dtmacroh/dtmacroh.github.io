@@ -444,14 +444,14 @@ into business-defined hierarchical models and integrate them into the system.
       template: `
   
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" v-bind:class="props.filter">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a v-bind:href="props.pageref" >
+          <div class="portfolio-item project-item">
+            <div class="hover-bg " style= "height:150px;width:100%"> <a v-bind:href="props.pageref" >
               <div class="hover-text">
                 <h4>{{ props.title }}</h4>
                 <small>{{ props.subtitle }}</small>
-                <div class="clearfix"></div>
+                <div class="clearfix fill"></div>
               </div>
-              <img :src="props.image" class="img-responsive container" alt="Project Title"> </a> 
+              <img :src="props.image" class="img-responsive fill" style="height:100%;" alt="{{ props.title }}"> </a> 
 			    </div>
 			  <div style="display:block;font-size:90%;text-align:center">
           <p>{{ props.title }}</p>

@@ -290,14 +290,6 @@ ol.typesocial li {
 	
 }
 .portfolio-item .hover-bg {
-	height: 140px;
-	overflow: hidden;
-	position: relative;
-	border-color:black;
-	border-width:1px;
-	
-}
-.portfolio-item .hover-bgA {
 	height: 290px;
 	overflow: hidden;
 	position: relative;
@@ -305,21 +297,8 @@ ol.typesocial li {
 	border-width:1px;
 	
 }
-.portfolio-item  Q1A {
-	height: 400px;
-	overflow: hidden;
-	position: relative;
-	border-color:black;
-	border-width:1px;
-	
-}
-.portfolio-item .datavis-bg {
-	height: 300px;
-	overflow: hidden;
-	position: relative;
-	border-color:black;
-	border-width:1px;
-	
+ .main{
+	height: 190px;
 }
 
 .hover-bg .hover-text {
@@ -719,4 +698,10 @@ img.img-circle.team-img {
 }
 #uofc{
 	color:black;
+}
+.project-item
+{
+
+	padding-left:4%;
+	padding-right:4%
 }
