@@ -114,7 +114,7 @@ function init() {
              html.offsetHeight <= windowHeight)) {
 
         html.style.height = 'auto';
-        setTimeout(refresh, 10);
+        // setTimeout(refresh, 10);
 
         // clearfix
         if (root.offsetHeight <= windowHeight) {
@@ -292,7 +292,7 @@ function wheel(event) {
     }
     
     scrollArray(overflowing, -deltaX, -deltaY);
-    event.preventDefault();
+    // event.preventDefault();
 }
 
 /**

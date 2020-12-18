@@ -429,7 +429,7 @@ function toggle(d) {
         d._children = null;
     }
 }
-window.addEventListener('resize', drawChart);
+// window.addEventListener('resize', drawChart);
 
 function updateHeight(winWidth) {
     height = .7 * width;
