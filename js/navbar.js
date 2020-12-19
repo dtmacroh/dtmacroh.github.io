@@ -12,9 +12,10 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html">DEBBIE MACROHON
-					<strong></strong>
+                </button>
+                <a  href="index.html"> <img  class="navbar-brand" style="height:55px" src="img/logo.png"></a>
+				<a class="navbar-brand" href="index.html"> DEBBIE MACROHON
+			
           </a>
 			</div>
       
