@@ -33,7 +33,7 @@ h5 {
 p {
 	font-family: 'Open Sans', sans-serif; 
 	/* font-family: 'Quicksand', sans-serif; */
-	line-height: 1.6;
+	line-height: 1.7;
 	font-size: 15px;
 	
 }
@@ -473,7 +473,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 @media (max-width: 5000px) {
 
 .video{
-	height:500px;
+	height:600px;
 }
 #treeskills{
 	max-height:700px;
@@ -634,17 +634,17 @@ padding-left:0;
 
 	padding: 10px 0;
 
+
 }
 
 .section-title h2 {
 
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 
 }
 
 .section-title h3 {
-
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 
 }
 
@@ -704,4 +704,14 @@ img.img-circle.team-img {
 
 	padding-left:4%;
 	padding-right:4%
+}
+.imgcaption
+{
+
+	font-size: 13px;
+	text-align: center;
+}
+.lastmod
+{
+	text-align:right;
 }
