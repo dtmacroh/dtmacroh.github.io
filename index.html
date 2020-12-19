@@ -35,46 +35,10 @@
 </head>
 
 <body>
-  <!-- Navigation
-    ==========================================-->
-  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">
-            Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html"> DEBBIE MACROHON
-          <strong></strong>
-        </a>
-      </div>
+  <div id="nav">
+    <navbar v-for="n in iter" v-bind:navi = "n" ></navbar>
+  </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#home" class="page-scroll">Home</a>
-          </li>
-          <li>
-            <a href="#works-section" class="page-scroll">Portfolio</a>
-          </li>
-          <li>
-            <a href="#about-section" class="page-scroll">About</a>
-          </li>
-          <li>
-            <a href="puns.html" class="page-scroll">Puns</a>
-          </li>
-
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
 
 
   <!-- Header -->
@@ -433,11 +397,14 @@ into business-defined hierarchical models and integrate them into the system.
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="js/treeskills.js" charset="utf-8"></script>
   <script src="js/vue.js"></script>
+  <script src="js/navbar.js"></script>
+
   <script>
+
     Vue.component('project', {
       props: ['props'],
       template: `
-  
+      
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" v-bind:class="props.filter">
           <div class="portfolio-item project-item">
             <div class="hover-bg " style= "height:150px;width:100%"> <a v-bind:href="props.pageref" >
@@ -446,7 +413,7 @@ into business-defined hierarchical models and integrate them into the system.
                 <small>{{ props.subtitle }}</small>
                 <div class="clearfix fill"></div>
               </div>
-              <img :src="props.image" class="img-responsive fill" style="height:100%;" alt="{{ props.title }}"> </a> 
+              <img :src="props.image" class="img-responsive fill" style="height:100%;" :alt="props.title" > </a> 
 			    </div>
 			  <div style="display:block;font-size:90%;text-align:center">
           <p>{{ props.title }}</p>
