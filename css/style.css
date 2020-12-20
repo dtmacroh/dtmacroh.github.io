@@ -1,5 +1,6 @@
 body, html {
-	/* font-family: 'Lato', sans-serif; */
+	font-family: 'Quattrocento Sans', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #777;
@@ -31,10 +32,11 @@ h5 {
 	line-height: 25px;
 }
 p {
-	font-family: 'Open Sans', sans-serif; 
+	/* font-family: 'Open Sans', sans-serif;  */
 	/* font-family: 'Quicksand', sans-serif; */
+
 	line-height: 1.7;
-	font-size: 15px;
+	font-size: 18px;
 	
 }
 article{
@@ -78,7 +80,7 @@ ul, ol {
 	webkit-padding: 0;
 	moz-padding: 0;
 	list-style: none;
-	font-family: 'Open Sans', sans-serif; 
+	/* font-family: 'Open Sans', sans-serif;  */
 }
 .custom-list-u{
 	list-style:inherit;
@@ -187,7 +189,7 @@ header p {
 }
 .btn-default {
 	color: #fff;
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
 	background-color: transparent;
 	border: 2px solid rgba(255,255,255,0.8);
 	margin: 0 8px;
@@ -379,7 +381,7 @@ ol.typesocial li {
 label {
 	font-size: 12px;
 	font-weight: 400;
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
 	float: left;
 }
 #contact-section .form-control {
@@ -578,7 +580,7 @@ label {
     visibility: visible;
 }
 .dropdown-menu li{
-	font-family: font-family: 'Open Sans', sans-serif; 
+	/* font-family: font-family: 'Open Sans', sans-serif;  */
 	text-transform: uppercase;
 	
 }
