@@ -58,3 +58,33 @@ var nav = new Vue({
     }
   })
   
+
+  Vue.component('foot', {
+	props: ['foot'],
+	template: `
+	<div id="footer">
+	<div class="container">
+	<div class="fnav">
+	  <p>Copyright &copy; Debbie Macrohon. Designed by
+		<a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a>
+	  </p>
+	  <div>Icons made by
+		<a href="http://www.freepik.com" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/lucy-g" title="Lucy G">Lucy G</a> from
+		<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+		<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+		  target="_blank">CC 3.0 BY</a>
+	  </div>
+	 
+	</div>
+  </div>
+  </div>`
+  })
+
+  
+var nav = new Vue({
+    el:'#foot',
+    data:{
+        iter:[{id:1}]
+    }
+  })
+  
