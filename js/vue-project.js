@@ -73,6 +73,14 @@
               image: "img/portfolio/bettybotmain.png",
               filter: 'robotics',
               exp: ['Python', 'Powershell']
+            },
+            {
+              title: "IronViz 2020",
+              subtitle: "Visualization about Health and Wellness",
+              pageref: "healthviz.html",
+              image: "img/portfolio/ironviz.jpg",
+              filter: 'datavis',
+              exp: ['Python', 'Tableau']
             }
           ]
   
