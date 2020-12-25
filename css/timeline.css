@@ -125,9 +125,9 @@ Main Components
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: -5px;
-  height: 12px;
-  width: 12px;
+  bottom: -9px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   border: 2px solid #dfdfdf;
   background-color: #f8f8f8;
