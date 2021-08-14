@@ -78,7 +78,7 @@
               title: "IronViz 2020",
               subtitle: "Visualization about Health and Wellness",
               pageref: "healthviz.html",
-              image: "img/portfolio/ironviz.jpg",
+              image: "img/portfolio/IronViz.jpg",
               filter: 'datavis',
               exp: ['Python', 'Tableau']
             }
